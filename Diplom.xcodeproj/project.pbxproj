@@ -1,0 +1,520 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		88A0122A189E85600051D570 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A01229189E85600051D570 /* Foundation.framework */; };
+		88A0122C189E85600051D570 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A0122B189E85600051D570 /* CoreGraphics.framework */; };
+		88A0122E189E85600051D570 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A0122D189E85600051D570 /* UIKit.framework */; };
+		88A01234189E85600051D570 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 88A01232189E85600051D570 /* InfoPlist.strings */; };
+		88A01236189E85600051D570 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A01235189E85600051D570 /* main.m */; };
+		88A0123A189E85600051D570 /* RPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A01239189E85600051D570 /* RPAppDelegate.m */; };
+		88A01242189E85600051D570 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88A01241189E85600051D570 /* Images.xcassets */; };
+		88A01249189E85600051D570 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A01248189E85600051D570 /* XCTest.framework */; };
+		88A0124A189E85600051D570 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A01229189E85600051D570 /* Foundation.framework */; };
+		88A0124B189E85600051D570 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A0122D189E85600051D570 /* UIKit.framework */; };
+		88A01262189E86580051D570 /* RPBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A01260189E86580051D570 /* RPBaseController.m */; };
+		88A01263189E86580051D570 /* RPBaseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88A01261189E86580051D570 /* RPBaseView.xib */; };
+		88A01267189E867F0051D570 /* RPStartController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A01265189E867F0051D570 /* RPStartController.m */; };
+		88A01268189E867F0051D570 /* RPStartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88A01266189E867F0051D570 /* RPStartView.xib */; };
+		88A0126F189E86E20051D570 /* RPEventHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A0126C189E86E20051D570 /* RPEventHelper.m */; };
+		88A01270189E86E20051D570 /* UIColorAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A0126E189E86E20051D570 /* UIColorAdditions.m */; };
+		88A01279189EA08F0051D570 /* segoeui.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A01272189EA08F0051D570 /* segoeui.ttf */; };
+		88A0127A189EA08F0051D570 /* segoeuib.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A01273189EA08F0051D570 /* segoeuib.ttf */; };
+		88A0127B189EA08F0051D570 /* segoeuii.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A01274189EA08F0051D570 /* segoeuii.ttf */; };
+		88A0127C189EA08F0051D570 /* segoeuil.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A01275189EA08F0051D570 /* segoeuil.ttf */; };
+		88A0127D189EA08F0051D570 /* segoeuisl.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A01276189EA08F0051D570 /* segoeuisl.ttf */; };
+		88A0127E189EA08F0051D570 /* segoeuiz.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A01277189EA08F0051D570 /* segoeuiz.ttf */; };
+		88A0127F189EA08F0051D570 /* seguisb.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A01278189EA08F0051D570 /* seguisb.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		88A0124C189E85600051D570 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88A0121E189E85600051D570 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88A01225189E85600051D570;
+			remoteInfo = Diplom;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		88A01226189E85600051D570 /* Diplom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diplom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		88A01229189E85600051D570 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		88A0122B189E85600051D570 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		88A0122D189E85600051D570 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		88A01231189E85600051D570 /* Diplom-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Diplom-Info.plist"; sourceTree = "<group>"; };
+		88A01233189E85600051D570 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		88A01235189E85600051D570 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		88A01237189E85600051D570 /* Diplom-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Diplom-Prefix.pch"; sourceTree = "<group>"; };
+		88A01238189E85600051D570 /* RPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RPAppDelegate.h; sourceTree = "<group>"; };
+		88A01239189E85600051D570 /* RPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RPAppDelegate.m; sourceTree = "<group>"; };
+		88A01241189E85600051D570 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		88A01247189E85600051D570 /* DiplomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiplomTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		88A01248189E85600051D570 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		88A0125F189E86580051D570 /* RPBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPBaseController.h; sourceTree = "<group>"; };
+		88A01260189E86580051D570 /* RPBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPBaseController.m; sourceTree = "<group>"; };
+		88A01261189E86580051D570 /* RPBaseView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RPBaseView.xib; path = ../Controllers/RPBaseView.xib; sourceTree = "<group>"; };
+		88A01264189E867F0051D570 /* RPStartController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPStartController.h; sourceTree = "<group>"; };
+		88A01265189E867F0051D570 /* RPStartController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPStartController.m; sourceTree = "<group>"; };
+		88A01266189E867F0051D570 /* RPStartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RPStartView.xib; path = ../Controllers/RPStartView.xib; sourceTree = "<group>"; };
+		88A0126B189E86E20051D570 /* RPEventHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPEventHelper.h; sourceTree = "<group>"; };
+		88A0126C189E86E20051D570 /* RPEventHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPEventHelper.m; sourceTree = "<group>"; };
+		88A0126D189E86E20051D570 /* UIColorAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColorAdditions.h; sourceTree = "<group>"; };
+		88A0126E189E86E20051D570 /* UIColorAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIColorAdditions.m; sourceTree = "<group>"; };
+		88A01272189EA08F0051D570 /* segoeui.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = segoeui.ttf; sourceTree = "<group>"; };
+		88A01273189EA08F0051D570 /* segoeuib.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = segoeuib.ttf; sourceTree = "<group>"; };
+		88A01274189EA08F0051D570 /* segoeuii.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = segoeuii.ttf; sourceTree = "<group>"; };
+		88A01275189EA08F0051D570 /* segoeuil.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = segoeuil.ttf; sourceTree = "<group>"; };
+		88A01276189EA08F0051D570 /* segoeuisl.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = segoeuisl.ttf; sourceTree = "<group>"; };
+		88A01277189EA08F0051D570 /* segoeuiz.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = segoeuiz.ttf; sourceTree = "<group>"; };
+		88A01278189EA08F0051D570 /* seguisb.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = seguisb.ttf; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		88A01223189E85600051D570 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88A0122C189E85600051D570 /* CoreGraphics.framework in Frameworks */,
+				88A0122E189E85600051D570 /* UIKit.framework in Frameworks */,
+				88A0122A189E85600051D570 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88A01244189E85600051D570 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88A01249189E85600051D570 /* XCTest.framework in Frameworks */,
+				88A0124B189E85600051D570 /* UIKit.framework in Frameworks */,
+				88A0124A189E85600051D570 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		88A0121D189E85600051D570 = {
+			isa = PBXGroup;
+			children = (
+				88A0122F189E85600051D570 /* Diplom */,
+				88A01228189E85600051D570 /* Frameworks */,
+				88A01227189E85600051D570 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		88A01227189E85600051D570 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				88A01226189E85600051D570 /* Diplom.app */,
+				88A01247189E85600051D570 /* DiplomTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		88A01228189E85600051D570 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88A01229189E85600051D570 /* Foundation.framework */,
+				88A0122B189E85600051D570 /* CoreGraphics.framework */,
+				88A0122D189E85600051D570 /* UIKit.framework */,
+				88A01248189E85600051D570 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		88A0122F189E85600051D570 /* Diplom */ = {
+			isa = PBXGroup;
+			children = (
+				88A0126A189E86E20051D570 /* Helpers */,
+				88A01269189E868B0051D570 /* Views */,
+				88A0125E189E86420051D570 /* Controllers */,
+				88A01238189E85600051D570 /* RPAppDelegate.h */,
+				88A01239189E85600051D570 /* RPAppDelegate.m */,
+				88A01241189E85600051D570 /* Images.xcassets */,
+				88A01230189E85600051D570 /* Supporting Files */,
+			);
+			path = Diplom;
+			sourceTree = "<group>";
+		};
+		88A01230189E85600051D570 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				88A01271189EA0840051D570 /* Fonts */,
+				88A01231189E85600051D570 /* Diplom-Info.plist */,
+				88A01232189E85600051D570 /* InfoPlist.strings */,
+				88A01235189E85600051D570 /* main.m */,
+				88A01237189E85600051D570 /* Diplom-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		88A0125E189E86420051D570 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				88A0125F189E86580051D570 /* RPBaseController.h */,
+				88A01260189E86580051D570 /* RPBaseController.m */,
+				88A01264189E867F0051D570 /* RPStartController.h */,
+				88A01265189E867F0051D570 /* RPStartController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		88A01269189E868B0051D570 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				88A01261189E86580051D570 /* RPBaseView.xib */,
+				88A01266189E867F0051D570 /* RPStartView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		88A0126A189E86E20051D570 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				88A0126B189E86E20051D570 /* RPEventHelper.h */,
+				88A0126C189E86E20051D570 /* RPEventHelper.m */,
+				88A0126D189E86E20051D570 /* UIColorAdditions.h */,
+				88A0126E189E86E20051D570 /* UIColorAdditions.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		88A01271189EA0840051D570 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				88A01272189EA08F0051D570 /* segoeui.ttf */,
+				88A01273189EA08F0051D570 /* segoeuib.ttf */,
+				88A01274189EA08F0051D570 /* segoeuii.ttf */,
+				88A01275189EA08F0051D570 /* segoeuil.ttf */,
+				88A01276189EA08F0051D570 /* segoeuisl.ttf */,
+				88A01277189EA08F0051D570 /* segoeuiz.ttf */,
+				88A01278189EA08F0051D570 /* seguisb.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		88A01225189E85600051D570 /* Diplom */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88A01258189E85600051D570 /* Build configuration list for PBXNativeTarget "Diplom" */;
+			buildPhases = (
+				88A01222189E85600051D570 /* Sources */,
+				88A01223189E85600051D570 /* Frameworks */,
+				88A01224189E85600051D570 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Diplom;
+			productName = Diplom;
+			productReference = 88A01226189E85600051D570 /* Diplom.app */;
+			productType = "com.apple.product-type.application";
+		};
+		88A01246189E85600051D570 /* DiplomTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88A0125B189E85600051D570 /* Build configuration list for PBXNativeTarget "DiplomTests" */;
+			buildPhases = (
+				88A01243189E85600051D570 /* Sources */,
+				88A01244189E85600051D570 /* Frameworks */,
+				88A01245189E85600051D570 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				88A0124D189E85600051D570 /* PBXTargetDependency */,
+			);
+			name = DiplomTests;
+			productName = DiplomTests;
+			productReference = 88A01247189E85600051D570 /* DiplomTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		88A0121E189E85600051D570 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = RP;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = BSU;
+				TargetAttributes = {
+					88A01246189E85600051D570 = {
+						TestTargetID = 88A01225189E85600051D570;
+					};
+				};
+			};
+			buildConfigurationList = 88A01221189E85600051D570 /* Build configuration list for PBXProject "Diplom" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 88A0121D189E85600051D570;
+			productRefGroup = 88A01227189E85600051D570 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				88A01225189E85600051D570 /* Diplom */,
+				88A01246189E85600051D570 /* DiplomTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		88A01224189E85600051D570 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88A01242189E85600051D570 /* Images.xcassets in Resources */,
+				88A01263189E86580051D570 /* RPBaseView.xib in Resources */,
+				88A01279189EA08F0051D570 /* segoeui.ttf in Resources */,
+				88A0127B189EA08F0051D570 /* segoeuii.ttf in Resources */,
+				88A0127A189EA08F0051D570 /* segoeuib.ttf in Resources */,
+				88A0127C189EA08F0051D570 /* segoeuil.ttf in Resources */,
+				88A0127D189EA08F0051D570 /* segoeuisl.ttf in Resources */,
+				88A0127E189EA08F0051D570 /* segoeuiz.ttf in Resources */,
+				88A01268189E867F0051D570 /* RPStartView.xib in Resources */,
+				88A0127F189EA08F0051D570 /* seguisb.ttf in Resources */,
+				88A01234189E85600051D570 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88A01245189E85600051D570 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		88A01222189E85600051D570 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88A0126F189E86E20051D570 /* RPEventHelper.m in Sources */,
+				88A01270189E86E20051D570 /* UIColorAdditions.m in Sources */,
+				88A0123A189E85600051D570 /* RPAppDelegate.m in Sources */,
+				88A01262189E86580051D570 /* RPBaseController.m in Sources */,
+				88A01267189E867F0051D570 /* RPStartController.m in Sources */,
+				88A01236189E85600051D570 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88A01243189E85600051D570 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		88A0124D189E85600051D570 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 88A01225189E85600051D570 /* Diplom */;
+			targetProxy = 88A0124C189E85600051D570 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		88A01232189E85600051D570 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88A01233189E85600051D570 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		88A01256189E85600051D570 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		88A01257189E85600051D570 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		88A01259189E85600051D570 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Diplom/Diplom-Prefix.pch";
+				INFOPLIST_FILE = "Diplom/Diplom-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		88A0125A189E85600051D570 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Diplom/Diplom-Prefix.pch";
+				INFOPLIST_FILE = "Diplom/Diplom-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		88A0125C189E85600051D570 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Diplom.app/Diplom";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Diplom/Diplom-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "DiplomTests/DiplomTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		88A0125D189E85600051D570 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Diplom.app/Diplom";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Diplom/Diplom-Prefix.pch";
+				INFOPLIST_FILE = "DiplomTests/DiplomTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		88A01221189E85600051D570 /* Build configuration list for PBXProject "Diplom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88A01256189E85600051D570 /* Debug */,
+				88A01257189E85600051D570 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88A01258189E85600051D570 /* Build configuration list for PBXNativeTarget "Diplom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88A01259189E85600051D570 /* Debug */,
+				88A0125A189E85600051D570 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88A0125B189E85600051D570 /* Build configuration list for PBXNativeTarget "DiplomTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88A0125C189E85600051D570 /* Debug */,
+				88A0125D189E85600051D570 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 88A0121E189E85600051D570 /* Project object */;
+}
