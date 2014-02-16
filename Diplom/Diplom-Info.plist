@@ -26,6 +26,7 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
+		<string>segoeuisb.ttf</string>
 		<string>segoeuisl.ttf</string>
 		<string>segoeuil.ttf</string>
 		<string>segoeuii.ttf</string>

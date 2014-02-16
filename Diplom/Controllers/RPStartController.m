@@ -7,6 +7,7 @@
 //
 
 #import "RPStartController.h"
+#import "RPProjectModelController.h"
 
 @implementation RPStartController
 
@@ -35,6 +36,10 @@
     [self.navigationController setNavigationBarHidden:YES];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
 - (void) addGradient:(UIButton *) _button {
     
     // Add Border
@@ -56,6 +61,11 @@
                             [NSNumber numberWithFloat:1.0f],
                             nil];
     [layer addSublayer:shineLayer];
+}
+
+- (IBAction)onProjectModel:(id)sender {
+    RPProjectModelController *modelController = [RPProjectModelController new];
+    [self.navigationController pushViewController:modelController animated:YES];
 }
 
 @end

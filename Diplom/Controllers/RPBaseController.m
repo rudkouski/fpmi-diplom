@@ -61,6 +61,12 @@
     [RPEventHelper propagateEvent:eventName withObject:userValue];
 }
 
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    //Iterate through your subviews, or some other custom array of views
+    for (UIView *view in self.view.subviews)
+        [view resignFirstResponder];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

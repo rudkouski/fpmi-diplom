@@ -30,6 +30,8 @@
 		88A0127D189EA08F0051D570 /* segoeuisl.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A01276189EA08F0051D570 /* segoeuisl.ttf */; };
 		88A0127E189EA08F0051D570 /* segoeuiz.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A01277189EA08F0051D570 /* segoeuiz.ttf */; };
 		88A0127F189EA08F0051D570 /* seguisb.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A01278189EA08F0051D570 /* seguisb.ttf */; };
+		88AEEDF818B0B4E300597987 /* RPProjectModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88AEEDF618B0B4E300597987 /* RPProjectModelController.m */; };
+		88AEEDF918B0B4E300597987 /* RPProjectModelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88AEEDF718B0B4E300597987 /* RPProjectModelView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,9 @@
 		88A01276189EA08F0051D570 /* segoeuisl.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = segoeuisl.ttf; sourceTree = "<group>"; };
 		88A01277189EA08F0051D570 /* segoeuiz.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = segoeuiz.ttf; sourceTree = "<group>"; };
 		88A01278189EA08F0051D570 /* seguisb.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = seguisb.ttf; sourceTree = "<group>"; };
+		88AEEDF518B0B4E300597987 /* RPProjectModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPProjectModelController.h; sourceTree = "<group>"; };
+		88AEEDF618B0B4E300597987 /* RPProjectModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPProjectModelController.m; sourceTree = "<group>"; };
+		88AEEDF718B0B4E300597987 /* RPProjectModelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RPProjectModelView.xib; path = ../Controllers/RPProjectModelView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +166,8 @@
 				88A01260189E86580051D570 /* RPBaseController.m */,
 				88A01264189E867F0051D570 /* RPStartController.h */,
 				88A01265189E867F0051D570 /* RPStartController.m */,
+				88AEEDF518B0B4E300597987 /* RPProjectModelController.h */,
+				88AEEDF618B0B4E300597987 /* RPProjectModelController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -170,6 +177,7 @@
 			children = (
 				88A01261189E86580051D570 /* RPBaseView.xib */,
 				88A01266189E867F0051D570 /* RPStartView.xib */,
+				88AEEDF718B0B4E300597987 /* RPProjectModelView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -283,6 +291,7 @@
 				88A0127A189EA08F0051D570 /* segoeuib.ttf in Resources */,
 				88A0127C189EA08F0051D570 /* segoeuil.ttf in Resources */,
 				88A0127D189EA08F0051D570 /* segoeuisl.ttf in Resources */,
+				88AEEDF918B0B4E300597987 /* RPProjectModelView.xib in Resources */,
 				88A0127E189EA08F0051D570 /* segoeuiz.ttf in Resources */,
 				88A01268189E867F0051D570 /* RPStartView.xib in Resources */,
 				88A0127F189EA08F0051D570 /* seguisb.ttf in Resources */,
@@ -310,6 +319,7 @@
 				88A01262189E86580051D570 /* RPBaseController.m in Sources */,
 				88A01267189E867F0051D570 /* RPStartController.m in Sources */,
 				88A01236189E85600051D570 /* main.m in Sources */,
+				88AEEDF818B0B4E300597987 /* RPProjectModelController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
