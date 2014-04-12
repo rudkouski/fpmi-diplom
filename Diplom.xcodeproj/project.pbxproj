@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8811D82918F9708A00BA0171 /* RPCreateDiagnosticValuesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8811D82818F9708A00BA0171 /* RPCreateDiagnosticValuesController.m */; };
+		8811D82C18F9725900BA0171 /* RPDiagnosticObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8811D82B18F9725900BA0171 /* RPDiagnosticObject.m */; };
+		88663CC818F312E4008A796D /* RPCorporativeStandartsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88663CC618F312E4008A796D /* RPCorporativeStandartsController.m */; };
+		88663CC918F312E4008A796D /* RPCorporativeStandartsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88663CC718F312E4008A796D /* RPCorporativeStandartsView.xib */; };
 		88A0122A189E85600051D570 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A01229189E85600051D570 /* Foundation.framework */; };
 		88A0122C189E85600051D570 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A0122B189E85600051D570 /* CoreGraphics.framework */; };
 		88A0122E189E85600051D570 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A0122D189E85600051D570 /* UIKit.framework */; };
@@ -32,6 +36,8 @@
 		88A0127F189EA08F0051D570 /* seguisb.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A01278189EA08F0051D570 /* seguisb.ttf */; };
 		88AEEDF818B0B4E300597987 /* RPProjectModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88AEEDF618B0B4E300597987 /* RPProjectModelController.m */; };
 		88AEEDF918B0B4E300597987 /* RPProjectModelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88AEEDF718B0B4E300597987 /* RPProjectModelView.xib */; };
+		88EA100418F95FDA00446348 /* RPBaseModalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EA100318F95FDA00446348 /* RPBaseModalController.m */; };
+		88EA100718F9694500446348 /* RPDatePickerModalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EA100618F9694500446348 /* RPDatePickerModalController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +51,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8811D82718F9708A00BA0171 /* RPCreateDiagnosticValuesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPCreateDiagnosticValuesController.h; sourceTree = "<group>"; };
+		8811D82818F9708A00BA0171 /* RPCreateDiagnosticValuesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPCreateDiagnosticValuesController.m; sourceTree = "<group>"; };
+		8811D82A18F9725900BA0171 /* RPDiagnosticObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPDiagnosticObject.h; sourceTree = "<group>"; };
+		8811D82B18F9725900BA0171 /* RPDiagnosticObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPDiagnosticObject.m; sourceTree = "<group>"; };
+		88663CC518F312E4008A796D /* RPCorporativeStandartsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPCorporativeStandartsController.h; sourceTree = "<group>"; };
+		88663CC618F312E4008A796D /* RPCorporativeStandartsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPCorporativeStandartsController.m; sourceTree = "<group>"; };
+		88663CC718F312E4008A796D /* RPCorporativeStandartsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RPCorporativeStandartsView.xib; path = ../Controllers/RPCorporativeStandartsView.xib; sourceTree = "<group>"; };
 		88A01226189E85600051D570 /* Diplom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diplom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A01229189E85600051D570 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		88A0122B189E85600051D570 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -78,6 +91,10 @@
 		88AEEDF518B0B4E300597987 /* RPProjectModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPProjectModelController.h; sourceTree = "<group>"; };
 		88AEEDF618B0B4E300597987 /* RPProjectModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPProjectModelController.m; sourceTree = "<group>"; };
 		88AEEDF718B0B4E300597987 /* RPProjectModelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RPProjectModelView.xib; path = ../Controllers/RPProjectModelView.xib; sourceTree = "<group>"; };
+		88EA100218F95FDA00446348 /* RPBaseModalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPBaseModalController.h; sourceTree = "<group>"; };
+		88EA100318F95FDA00446348 /* RPBaseModalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPBaseModalController.m; sourceTree = "<group>"; };
+		88EA100518F9694500446348 /* RPDatePickerModalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPDatePickerModalController.h; sourceTree = "<group>"; };
+		88EA100618F9694500446348 /* RPDatePickerModalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPDatePickerModalController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +121,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8811D82D18F9726100BA0171 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8811D82A18F9725900BA0171 /* RPDiagnosticObject.h */,
+				8811D82B18F9725900BA0171 /* RPDiagnosticObject.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		88A0121D189E85600051D570 = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +162,7 @@
 		88A0122F189E85600051D570 /* Diplom */ = {
 			isa = PBXGroup;
 			children = (
+				8811D82D18F9726100BA0171 /* Models */,
 				88A0126A189E86E20051D570 /* Helpers */,
 				88A01269189E868B0051D570 /* Views */,
 				88A0125E189E86420051D570 /* Controllers */,
@@ -164,10 +191,18 @@
 			children = (
 				88A0125F189E86580051D570 /* RPBaseController.h */,
 				88A01260189E86580051D570 /* RPBaseController.m */,
+				88EA100218F95FDA00446348 /* RPBaseModalController.h */,
+				88EA100318F95FDA00446348 /* RPBaseModalController.m */,
 				88A01264189E867F0051D570 /* RPStartController.h */,
 				88A01265189E867F0051D570 /* RPStartController.m */,
 				88AEEDF518B0B4E300597987 /* RPProjectModelController.h */,
 				88AEEDF618B0B4E300597987 /* RPProjectModelController.m */,
+				88663CC518F312E4008A796D /* RPCorporativeStandartsController.h */,
+				88663CC618F312E4008A796D /* RPCorporativeStandartsController.m */,
+				88EA100518F9694500446348 /* RPDatePickerModalController.h */,
+				88EA100618F9694500446348 /* RPDatePickerModalController.m */,
+				8811D82718F9708A00BA0171 /* RPCreateDiagnosticValuesController.h */,
+				8811D82818F9708A00BA0171 /* RPCreateDiagnosticValuesController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -178,6 +213,7 @@
 				88A01261189E86580051D570 /* RPBaseView.xib */,
 				88A01266189E867F0051D570 /* RPStartView.xib */,
 				88AEEDF718B0B4E300597987 /* RPProjectModelView.xib */,
+				88663CC718F312E4008A796D /* RPCorporativeStandartsView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -287,6 +323,7 @@
 				88A01242189E85600051D570 /* Images.xcassets in Resources */,
 				88A01263189E86580051D570 /* RPBaseView.xib in Resources */,
 				88A01279189EA08F0051D570 /* segoeui.ttf in Resources */,
+				88663CC918F312E4008A796D /* RPCorporativeStandartsView.xib in Resources */,
 				88A0127B189EA08F0051D570 /* segoeuii.ttf in Resources */,
 				88A0127A189EA08F0051D570 /* segoeuib.ttf in Resources */,
 				88A0127C189EA08F0051D570 /* segoeuil.ttf in Resources */,
@@ -314,10 +351,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				88A0126F189E86E20051D570 /* RPEventHelper.m in Sources */,
+				88EA100718F9694500446348 /* RPDatePickerModalController.m in Sources */,
+				88663CC818F312E4008A796D /* RPCorporativeStandartsController.m in Sources */,
 				88A01270189E86E20051D570 /* UIColorAdditions.m in Sources */,
 				88A0123A189E85600051D570 /* RPAppDelegate.m in Sources */,
+				88EA100418F95FDA00446348 /* RPBaseModalController.m in Sources */,
+				8811D82918F9708A00BA0171 /* RPCreateDiagnosticValuesController.m in Sources */,
 				88A01262189E86580051D570 /* RPBaseController.m in Sources */,
 				88A01267189E867F0051D570 /* RPStartController.m in Sources */,
+				8811D82C18F9725900BA0171 /* RPDiagnosticObject.m in Sources */,
 				88A01236189E85600051D570 /* main.m in Sources */,
 				88AEEDF818B0B4E300597987 /* RPProjectModelController.m in Sources */,
 			);

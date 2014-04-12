@@ -8,6 +8,7 @@
 
 #import "RPStartController.h"
 #import "RPProjectModelController.h"
+#import "RPCorporativeStandartsController.h"
 
 @implementation RPStartController
 
@@ -66,6 +67,11 @@
 - (IBAction)onProjectModel:(id)sender {
     RPProjectModelController *modelController = [RPProjectModelController new];
     [self.navigationController pushViewController:modelController animated:YES];
+}
+
+- (IBAction)onCorporativeDB:(id)sender {
+    RPCorporativeStandartsController *corporativeController = [RPCorporativeStandartsController new];
+    [self.navigationController pushViewController:corporativeController animated:YES];
 }
 
 @end

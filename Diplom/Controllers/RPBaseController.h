@@ -19,5 +19,7 @@
 - (void) propagateEvent:(NSString*)eventName;
 - (void) propagateEvent:(NSString*)eventName withObject:(id)userValue;
 
+- (void) addGradient:(UIView *) _button;
+- (void) addGradientForButton:(UIButton *) _button;
 
 @end

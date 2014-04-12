@@ -8,11 +8,14 @@
 
 #import "RPBaseController.h"
 
-@interface RPProjectModelController : RPBaseController
+@interface RPProjectModelController : RPBaseController <UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *lblTitles;
 @property (strong, nonatomic) IBOutletCollection(UIView) NSArray *vwHolders;
 @property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *lblInputTitles;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *btnButtons;
+
+@property (weak, nonatomic) IBOutlet UITextField *txtDateStart;
+@property (weak, nonatomic) IBOutlet UITextField *txtDateEnd;
 
 @end

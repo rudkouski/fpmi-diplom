@@ -7,12 +7,12 @@
 //
 
 #import "RPProjectModelController.h"
+#import "RPDatePickerModalController.h"
+#import "RPCreateDiagnosticValuesController.h"
 
-@interface RPProjectModelController ()
-
-@end
-
-@implementation RPProjectModelController
+@implementation RPProjectModelController {
+    NSMutableArray *diagnosticValues;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -46,58 +46,41 @@
     }
 }
 
-- (void) addGradient:(UIView *) _button {
-    // Add Border
-    CALayer *layer = _button.layer;
-//    layer.cornerRadius = 8.0f;
-    CALayer *superlayer = layer.superlayer;
-    [layer removeFromSuperlayer];
-    [superlayer insertSublayer:layer atIndex:[superlayer.sublayers count]];
+- (BOOL) textFieldShouldBeginEditing:(UITextField *)textField {
+    if (textField == self.txtDateStart) {
+        RPDatePickerModalController *modalController = [RPDatePickerModalController new];
     
-    layer.shadowOffset = CGSizeMake(-5, 5);
-    layer.shadowRadius = 5;
-    layer.shadowOpacity = 0.5;
-    layer.shadowColor = [[UIColor lightGrayColor] CGColor];
+        modalController.delegate = self.txtDateStart;
+        [modalController setTitle:@"Дата и время начала"];
+
+        [self presentViewController:modalController animated:YES completion:^{
+            
+        }];
+        
+        return NO;
+    } else if (textField == self.txtDateEnd) {
+        RPDatePickerModalController *modalController = [RPDatePickerModalController new];
+        
+        modalController.delegate = self.txtDateEnd;
+        [modalController setTitle:@"Дата и время завершения"];
+        
+        [self presentViewController:modalController animated:YES completion:^{
+            
+        }];
+        
+        return NO;
+    }
     
-    layer.masksToBounds = NO;
-    layer.borderWidth = 1.0f;
-    layer.borderColor = [UIColor colorWithWhite:0.8f alpha:0.2f].CGColor;
-    
-    // Add Shine
-    CAGradientLayer *shineLayer = [CAGradientLayer layer];
-    shineLayer.frame = layer.bounds;
-    shineLayer.colors = [NSArray arrayWithObjects:
-                         (id)[UIColor colorWithWhite:1.0f alpha:.2f].CGColor,
-                         (id)[UIColor colorWithWhite:1.0f alpha:.0f].CGColor,
-                         nil];
-    shineLayer.locations = [NSArray arrayWithObjects:
-                            [NSNumber numberWithFloat:0.0f],
-                            [NSNumber numberWithFloat:1.0f],
-                            nil];
-    [layer addSublayer:shineLayer];
+    return YES;
 }
 
-- (void) addGradientForButton:(UIButton *) _button {
-    // Add Border
-    CALayer *layer = _button.layer;
-    //    layer.cornerRadius = 8.0f
-    layer.masksToBounds = NO;
-    layer.borderWidth = 1.0f;
-    layer.borderColor = [UIColor colorWithWhite:0.8f alpha:0.2f].CGColor;
+- (IBAction)onCreateValues:(id)sender {
+    RPCreateDiagnosticValuesController *modalController = [RPCreateDiagnosticValuesController new];
+    modalController.numberOfValues = @(4);
+    diagnosticValues = [NSMutableArray new];
+    modalController.diagnosticValues = diagnosticValues;
     
-    // Add Shine
-    CAGradientLayer *shineLayer = [CAGradientLayer layer];
-    shineLayer.frame = layer.bounds;
-    shineLayer.colors = [NSArray arrayWithObjects:
-                         (id)[UIColor colorWithWhite:1.0f alpha:.2f].CGColor,
-                         (id)[UIColor colorWithWhite:1.0f alpha:.0f].CGColor,
-                         nil];
-    shineLayer.locations = [NSArray arrayWithObjects:
-                            [NSNumber numberWithFloat:0.0f],
-                            [NSNumber numberWithFloat:1.0f],
-                            nil];
-    [layer addSublayer:shineLayer];
+    [self presentViewController:modalController animated:YES completion:nil];
 }
-
 
 @end
