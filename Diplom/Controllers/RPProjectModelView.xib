@@ -7,9 +7,18 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RPProjectModelController">
             <connections>
                 <outlet property="btnCreateDiagnosticObjects" destination="ibY-0A-HWi" id="dmX-qR-qQi"/>
+                <outlet property="txtCenterAddress" destination="dtF-ab-VMq" id="S8U-UX-RLg"/>
+                <outlet property="txtCenterCommunications" destination="lc8-eU-ILb" id="RDg-I3-X1L"/>
+                <outlet property="txtCenterId" destination="LCY-D4-Ycj" id="vo0-SM-bYx"/>
                 <outlet property="txtDateEnd" destination="pPB-nY-eIc" id="ZH5-yX-9gA"/>
                 <outlet property="txtDateStart" destination="jdT-XU-BWw" id="71I-yo-Fgu"/>
+                <outlet property="txtMgoAddress" destination="kcI-AS-Syz" id="eOP-m1-4F8"/>
+                <outlet property="txtMgoCommunications" destination="Xic-bf-xbi" id="3pG-Ci-T40"/>
+                <outlet property="txtMgoFormula" destination="w2N-mi-hMn" id="f3S-8y-EHW"/>
+                <outlet property="txtMgoId" destination="Kei-49-hku" id="Uk0-4f-YSU"/>
                 <outlet property="txtNumberOfDiagnosticObjects" destination="81n-OR-ZJn" id="sGr-ZH-vSz"/>
+                <outlet property="txtProjectCost" destination="Tle-2U-Ewe" id="thI-wA-pVV"/>
+                <outlet property="txtProjectId" destination="8p4-Hz-prz" id="MRN-WY-32Z"/>
                 <outlet property="view" destination="2" id="3"/>
                 <outletCollection property="vwHolders" destination="sot-os-eTc" id="3qC-mm-Szo"/>
                 <outletCollection property="btnButtons" destination="DL5-Na-cjM" id="CgP-qR-VF2"/>
@@ -352,6 +361,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onSaveModel:" destination="-1" eventType="touchUpInside" id="RwB-sS-cE1"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Информационные сообщения" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7oz-8A-meM">
                                 <rect key="frame" x="0.0" y="669" width="1024" height="21"/>

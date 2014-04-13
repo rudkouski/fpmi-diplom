@@ -9,9 +9,11 @@
 #import "RPProjectModelController.h"
 #import "RPDatePickerModalController.h"
 #import "RPCreateDiagnosticValuesController.h"
+#import "RPModel.h"
 
 @implementation RPProjectModelController {
     NSMutableArray *diagnosticValues;
+    RPModel *currentModel;
 }
 
 - (void)viewDidLoad {
@@ -45,19 +47,60 @@
         [self addGradientForButton:btn];
     }
     
-    diagnosticValues = [NSMutableArray new];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *dataRepresentingSavedArray = [defaults objectForKey:@"diagnosticValues"];
+    
+    if (dataRepresentingSavedArray != nil) {
+        NSArray *oldSavedArray = [NSKeyedUnarchiver unarchiveObjectWithData:dataRepresentingSavedArray];
+        if (oldSavedArray != nil) {
+            diagnosticValues = [[NSMutableArray alloc] initWithArray:oldSavedArray];
+            self.txtNumberOfDiagnosticObjects.text = @(diagnosticValues.count).stringValue;
+        } else {
+            diagnosticValues = [[NSMutableArray alloc] init];
+        }
+    }
+    
+    dataRepresentingSavedArray = [defaults objectForKey:@"model"];
+    
+    if (dataRepresentingSavedArray != nil) {
+        RPModel *oldModel = [NSKeyedUnarchiver unarchiveObjectWithData:dataRepresentingSavedArray];
+        if (oldModel != nil) {
+            currentModel = oldModel;
+            [self displayModel:currentModel];
+        } else {
+            currentModel = [RPModel new];
+        }
+    }
     
     [[self.txtNumberOfDiagnosticObjects rac_textSignal] subscribeNext:^(NSString *text) {
         self.btnCreateDiagnosticObjects.enabled = text.length > 0;
         self.btnCreateDiagnosticObjects.alpha = text.length > 0 ? 1 : 0.5;
     }];
+    
+    self.navigationController.navigationBar.backItem.title = @"";
+}
+
+- (void) displayModel:(RPModel*)model {
+    self.txtCenterId.text = model.centerIdentificator;
+    self.txtCenterAddress.text = model.centerAddress;
+    self.txtCenterCommunications.text = model.centerCommunications;
+    
+    self.txtProjectId.text = model.projectIdentificator;
+    self.txtDateStart.text = model.projectStartDate;
+    self.txtDateEnd.text = model.projectEndDate;
+    self.txtProjectCost.text = model.projectCost;
+    
+    self.txtMgoId.text = model.mgoIdentificator;
+    self.txtMgoAddress.text = model.mgoAddress;
+    self.txtMgoCommunications.text = model.mgoCommunications;
+    self.txtMgoFormula.text = model.mgoFormula;
 }
 
 - (BOOL) textFieldShouldBeginEditing:(UITextField *)textField {
     if (textField == self.txtDateStart) {
         RPDatePickerModalController *modalController = [RPDatePickerModalController new];
     
-        modalController.delegate = self.txtDateStart;
+        modalController.customDelegate = self.txtDateStart;
         [modalController setTitle:@"Дата и время начала"];
 
         [self presentViewController:modalController animated:YES completion:^{
@@ -68,7 +111,7 @@
     } else if (textField == self.txtDateEnd) {
         RPDatePickerModalController *modalController = [RPDatePickerModalController new];
         
-        modalController.delegate = self.txtDateEnd;
+        modalController.customDelegate = self.txtDateEnd;
         [modalController setTitle:@"Дата и время завершения"];
         
         [self presentViewController:modalController animated:YES completion:^{
@@ -93,6 +136,32 @@
 
 - (void) setDiagnosticValues:(NSMutableArray*)values {
     diagnosticValues = values;
+}
+
+- (IBAction)onSaveModel:(id)sender {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    [defaults setObject:[NSKeyedArchiver archivedDataWithRootObject:diagnosticValues] forKey:@"diagnosticValues"];
+    
+    currentModel.centerIdentificator = self.txtCenterId.text;
+    currentModel.centerAddress = self.txtCenterAddress.text;
+    currentModel.centerCommunications = self.txtCenterCommunications.text;
+    
+    currentModel.projectIdentificator = self.txtProjectId.text;
+    currentModel.projectStartDate = self.txtDateStart.text;
+    currentModel.projectEndDate = self.txtDateEnd.text;
+    currentModel.projectCost = self.txtProjectCost.text;
+
+    currentModel.mgoIdentificator = self.txtMgoId.text;
+    currentModel.mgoAddress = self.txtMgoAddress.text;
+    currentModel.mgoCommunications = self.txtMgoCommunications.text;
+    currentModel.mgoFormula = self.txtMgoFormula.text;
+    
+    [defaults setObject:[NSKeyedArchiver archivedDataWithRootObject:currentModel] forKey:@"model"];
+    
+    [defaults synchronize];
+    
+    [SVProgressHUD showSuccessWithStatus:@"Модель успешно сохранена!"];
 }
 
 @end

@@ -10,4 +10,21 @@
 
 @implementation RPDiagnosticState
 
+- (void)encodeWithCoder:(NSCoder *)coder;
+{
+    [coder encodeObject:self.name forKey:@"name"];
+    [coder encodeObject:self.managementName forKey:@"managementName"];
+}
+
+- (id)initWithCoder:(NSCoder *)coder;
+{
+    self = [super init];
+    if (self != nil)
+    {
+        self.name = [coder decodeObjectForKey:@"name"];
+        self.managementName = [coder decodeObjectForKey:@"managementName"];
+    }
+    return self;
+}
+
 @end

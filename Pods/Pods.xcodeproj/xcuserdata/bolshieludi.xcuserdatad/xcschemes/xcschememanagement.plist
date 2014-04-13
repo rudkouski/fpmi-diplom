@@ -4,7 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-Diplom-MagicalRecord.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Diplom-ReactiveCocoa.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Diplom-SVProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>A09B106C5ECD4D8CBD27916A</key>
+		<key>15762576430D439E9DF527C6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ED78364CB22E4845B8865E4C</key>
+		<key>644200AB250646159403C747</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>84615ADA3EF14E55828C8A99</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E6343BE1F1004E9C9F1A5E17</key>
 		<dict>
 			<key>primary</key>
 			<true/>

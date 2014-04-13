@@ -9,6 +9,7 @@
 #import "RPStartController.h"
 #import "RPProjectModelController.h"
 #import "RPCorporativeStandartsController.h"
+#import "RPSimulationWithoutAIController.h"
 
 @implementation RPStartController
 
@@ -72,6 +73,11 @@
 - (IBAction)onCorporativeDB:(id)sender {
     RPCorporativeStandartsController *corporativeController = [RPCorporativeStandartsController new];
     [self.navigationController pushViewController:corporativeController animated:YES];
+}
+
+- (IBAction)onSimulateWithoutAI:(id)sender {
+    RPSimulationWithoutAIController *simulateController = [RPSimulationWithoutAIController new];
+    [self.navigationController pushViewController:simulateController animated:YES];
 }
 
 @end

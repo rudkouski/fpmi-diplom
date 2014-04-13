@@ -1,15 +1,23 @@
 PODS:
+  - MagicalRecord (2.2):
+    - MagicalRecord/Core
+  - MagicalRecord/Core (2.2)
   - ReactiveCocoa (2.3):
     - ReactiveCocoa/Core
     - ReactiveCocoa/no-arc
   - ReactiveCocoa/Core (2.3):
     - ReactiveCocoa/no-arc
   - ReactiveCocoa/no-arc (2.3)
+  - SVProgressHUD (1.0)
 
 DEPENDENCIES:
+  - MagicalRecord
   - ReactiveCocoa
+  - SVProgressHUD
 
 SPEC CHECKSUMS:
+  MagicalRecord: 95d49d74ef752cd52f6ad87bcb474817fc3978cf
   ReactiveCocoa: 1f6265f9d521923d3efcc37b00722cefc16df269
+  SVProgressHUD: 5e10939a296debf5fe5a5895eda9539b8b2114f1
 
 COCOAPODS: 0.31.1

@@ -5,6 +5,7 @@ target "Diplom" do
 
 pod "ReactiveCocoa"
 pod "MagicalRecord"
+pod 'SVProgressHUD'
 
 end
 

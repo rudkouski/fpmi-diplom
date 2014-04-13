@@ -22,8 +22,8 @@
 }
 
 - (void) onDone {
-    if ([self.delegate isKindOfClass:[UITextField class]]) {
-        UITextField *tmp = self.delegate;
+    if ([self.customDelegate isKindOfClass:[UITextField class]]) {
+        UITextField *tmp = self.customDelegate;
         
         NSDateFormatter *newFormatter = [NSDateFormatter new];
         [newFormatter setDateStyle:NSDateFormatterShortStyle];
