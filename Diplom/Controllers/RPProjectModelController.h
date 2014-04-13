@@ -18,4 +18,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtDateStart;
 @property (weak, nonatomic) IBOutlet UITextField *txtDateEnd;
 
+@property (weak, nonatomic) IBOutlet UITextField *txtNumberOfDiagnosticObjects;
+@property (weak, nonatomic) IBOutlet UIButton *btnCreateDiagnosticObjects;
+
+- (void) setDiagnosticValues:(NSMutableArray*)values;
+
 @end

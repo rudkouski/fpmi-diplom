@@ -13,8 +13,9 @@
 }
 
 @property (strong, nonatomic) NSString *title;
-@property (strong, nonatomic) id delegate;
+@property (strong, nonatomic) id customDelegate;
 
 - (void)setCustomView:(UIView*)view;
+- (void) onDone;
 
 @end

@@ -8,6 +8,7 @@
 
 #import "RPCreateDiagnosticValuesController.h"
 #import "RPDiagnosticObject.h"
+#import "RPEditDiagnosticValueController.h"
 
 @implementation RPCreateDiagnosticValuesController {
     UITableView *tblValues;
@@ -16,7 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    if (self.numberOfValues > 0 && self.diagnosticValues != nil) {
+    if (self.numberOfValues > 0 && self.diagnosticValues.count == 0) {
+        self.diagnosticValues = [NSMutableArray new];
+        
         for (NSInteger index = 1; index <= self.numberOfValues.integerValue; index++) {
             RPDiagnosticObject *tmp = [RPDiagnosticObject new];
             tmp.name = [NSString stringWithFormat:@"Показатель №%d", index];
@@ -25,13 +28,13 @@
         }
     }
     
-    tblValues = [[UITableView alloc] initWithFrame:self->rootController.view.frame];
+    tblValues = [[UITableView alloc] initWithFrame:CGRectMake(20, 20, 500, 500)];
     tblValues.delegate = self;
     tblValues.dataSource = self;
     
     rootController.title = @"Диагностические показатели";
     
-    [self setCustomView:tblValues];
+    [rootController.view addSubview:tblValues];
 }
 
 - (void)setCustomView:(UIView *)view {
@@ -42,6 +45,14 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.diagnosticValues.count;
+}
+
+- (void)onDone {
+    [super onDone];
+    
+    if ([self.customDelegate respondsToSelector:@selector(setDiagnosticValues:)]) {
+        [self.customDelegate performSelector:@selector(setDiagnosticValues:) withObject:self.diagnosticValues];
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -58,7 +69,12 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    RPEditDiagnosticValueController *editController = [RPEditDiagnosticValueController new];
     
+    editController.delegate = self;
+    editController.diagnosticValue = self.diagnosticValues[indexPath.row];
+    
+    [self pushViewController:editController animated:YES];
 }
 
 @end

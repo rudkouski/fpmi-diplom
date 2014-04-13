@@ -7,6 +7,7 @@
 //
 
 #import "RPBaseModalController.h"
+#import "UIColorAdditions.h"
 
 @implementation RPBaseModalController 
 
@@ -16,6 +17,10 @@
     if (self) {
         self.modalPresentationStyle = UIModalPresentationFormSheet;
         self.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+        
+        [self.navigationBar setBarTintColor:[UIColor colorWithRGB:0x10a8ab]];
+        [self.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil]];
+        [self.navigationBar setTintColor:[UIColor whiteColor]];
     }
     
     return self;

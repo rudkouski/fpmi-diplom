@@ -6,8 +6,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RPProjectModelController">
             <connections>
+                <outlet property="btnCreateDiagnosticObjects" destination="ibY-0A-HWi" id="dmX-qR-qQi"/>
                 <outlet property="txtDateEnd" destination="pPB-nY-eIc" id="ZH5-yX-9gA"/>
                 <outlet property="txtDateStart" destination="jdT-XU-BWw" id="71I-yo-Fgu"/>
+                <outlet property="txtNumberOfDiagnosticObjects" destination="81n-OR-ZJn" id="sGr-ZH-vSz"/>
                 <outlet property="view" destination="2" id="3"/>
                 <outletCollection property="vwHolders" destination="sot-os-eTc" id="3qC-mm-Szo"/>
                 <outletCollection property="btnButtons" destination="DL5-Na-cjM" id="CgP-qR-VF2"/>
@@ -263,7 +265,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" id="Ayg-wc-DOo">
                                         <rect key="frame" x="201" y="77" width="272" height="30"/>

@@ -44,6 +44,13 @@
         //        btn.titleLabel.lineBreakMode = UILineBreakModeCharacterWrap;
         [self addGradientForButton:btn];
     }
+    
+    diagnosticValues = [NSMutableArray new];
+    
+    [[self.txtNumberOfDiagnosticObjects rac_textSignal] subscribeNext:^(NSString *text) {
+        self.btnCreateDiagnosticObjects.enabled = text.length > 0;
+        self.btnCreateDiagnosticObjects.alpha = text.length > 0 ? 1 : 0.5;
+    }];
 }
 
 - (BOOL) textFieldShouldBeginEditing:(UITextField *)textField {
@@ -76,11 +83,16 @@
 
 - (IBAction)onCreateValues:(id)sender {
     RPCreateDiagnosticValuesController *modalController = [RPCreateDiagnosticValuesController new];
-    modalController.numberOfValues = @(4);
-    diagnosticValues = [NSMutableArray new];
+    modalController.numberOfValues = @(self.txtNumberOfDiagnosticObjects.text.intValue);
+    modalController.customDelegate = self;
+//    diagnosticValues = [NSMutableArray new];
     modalController.diagnosticValues = diagnosticValues;
     
     [self presentViewController:modalController animated:YES completion:nil];
+}
+
+- (void) setDiagnosticValues:(NSMutableArray*)values {
+    diagnosticValues = values;
 }
 
 @end

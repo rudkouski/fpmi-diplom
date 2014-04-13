@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31F65AFA423146F0A424E02B /* libPods-Diplom.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C8A04EA8924043879B451E /* libPods-Diplom.a */; };
 		8811D82918F9708A00BA0171 /* RPCreateDiagnosticValuesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8811D82818F9708A00BA0171 /* RPCreateDiagnosticValuesController.m */; };
 		8811D82C18F9725900BA0171 /* RPDiagnosticObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8811D82B18F9725900BA0171 /* RPDiagnosticObject.m */; };
 		88663CC818F312E4008A796D /* RPCorporativeStandartsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88663CC618F312E4008A796D /* RPCorporativeStandartsController.m */; };
@@ -34,8 +35,11 @@
 		88A0127D189EA08F0051D570 /* segoeuisl.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A01276189EA08F0051D570 /* segoeuisl.ttf */; };
 		88A0127E189EA08F0051D570 /* segoeuiz.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A01277189EA08F0051D570 /* segoeuiz.ttf */; };
 		88A0127F189EA08F0051D570 /* seguisb.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A01278189EA08F0051D570 /* seguisb.ttf */; };
+		88A7C01C18FA7E5C00F61293 /* RPEditDiagnosticValueController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A7C01A18FA7E5C00F61293 /* RPEditDiagnosticValueController.m */; };
+		88A7C01D18FA7E5C00F61293 /* RPEditDiagnosticValueView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88A7C01B18FA7E5C00F61293 /* RPEditDiagnosticValueView.xib */; };
 		88AEEDF818B0B4E300597987 /* RPProjectModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88AEEDF618B0B4E300597987 /* RPProjectModelController.m */; };
 		88AEEDF918B0B4E300597987 /* RPProjectModelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88AEEDF718B0B4E300597987 /* RPProjectModelView.xib */; };
+		88E5398D18FA8DC00086DACD /* RPDiagnosticState.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E5398C18FA8DC00086DACD /* RPDiagnosticState.m */; };
 		88EA100418F95FDA00446348 /* RPBaseModalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EA100318F95FDA00446348 /* RPBaseModalController.m */; };
 		88EA100718F9694500446348 /* RPDatePickerModalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EA100618F9694500446348 /* RPDatePickerModalController.m */; };
 /* End PBXBuildFile section */
@@ -51,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		69C8A04EA8924043879B451E /* libPods-Diplom.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Diplom.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8811D82718F9708A00BA0171 /* RPCreateDiagnosticValuesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPCreateDiagnosticValuesController.h; sourceTree = "<group>"; };
 		8811D82818F9708A00BA0171 /* RPCreateDiagnosticValuesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPCreateDiagnosticValuesController.m; sourceTree = "<group>"; };
 		8811D82A18F9725900BA0171 /* RPDiagnosticObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPDiagnosticObject.h; sourceTree = "<group>"; };
@@ -88,13 +93,19 @@
 		88A01276189EA08F0051D570 /* segoeuisl.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = segoeuisl.ttf; sourceTree = "<group>"; };
 		88A01277189EA08F0051D570 /* segoeuiz.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = segoeuiz.ttf; sourceTree = "<group>"; };
 		88A01278189EA08F0051D570 /* seguisb.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = seguisb.ttf; sourceTree = "<group>"; };
+		88A7C01918FA7E5C00F61293 /* RPEditDiagnosticValueController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPEditDiagnosticValueController.h; sourceTree = "<group>"; };
+		88A7C01A18FA7E5C00F61293 /* RPEditDiagnosticValueController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPEditDiagnosticValueController.m; sourceTree = "<group>"; };
+		88A7C01B18FA7E5C00F61293 /* RPEditDiagnosticValueView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RPEditDiagnosticValueView.xib; path = ../Controllers/RPEditDiagnosticValueView.xib; sourceTree = "<group>"; };
 		88AEEDF518B0B4E300597987 /* RPProjectModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPProjectModelController.h; sourceTree = "<group>"; };
 		88AEEDF618B0B4E300597987 /* RPProjectModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPProjectModelController.m; sourceTree = "<group>"; };
 		88AEEDF718B0B4E300597987 /* RPProjectModelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RPProjectModelView.xib; path = ../Controllers/RPProjectModelView.xib; sourceTree = "<group>"; };
+		88E5398B18FA8DC00086DACD /* RPDiagnosticState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPDiagnosticState.h; sourceTree = "<group>"; };
+		88E5398C18FA8DC00086DACD /* RPDiagnosticState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPDiagnosticState.m; sourceTree = "<group>"; };
 		88EA100218F95FDA00446348 /* RPBaseModalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPBaseModalController.h; sourceTree = "<group>"; };
 		88EA100318F95FDA00446348 /* RPBaseModalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPBaseModalController.m; sourceTree = "<group>"; };
 		88EA100518F9694500446348 /* RPDatePickerModalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPDatePickerModalController.h; sourceTree = "<group>"; };
 		88EA100618F9694500446348 /* RPDatePickerModalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPDatePickerModalController.m; sourceTree = "<group>"; };
+		DBEE337D87C6481CA643EB2C /* Pods-Diplom.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Diplom.xcconfig"; path = "Pods/Pods-Diplom.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +116,7 @@
 				88A0122C189E85600051D570 /* CoreGraphics.framework in Frameworks */,
 				88A0122E189E85600051D570 /* UIKit.framework in Frameworks */,
 				88A0122A189E85600051D570 /* Foundation.framework in Frameworks */,
+				31F65AFA423146F0A424E02B /* libPods-Diplom.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +138,8 @@
 			children = (
 				8811D82A18F9725900BA0171 /* RPDiagnosticObject.h */,
 				8811D82B18F9725900BA0171 /* RPDiagnosticObject.m */,
+				88E5398B18FA8DC00086DACD /* RPDiagnosticState.h */,
+				88E5398C18FA8DC00086DACD /* RPDiagnosticState.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -136,6 +150,7 @@
 				88A0122F189E85600051D570 /* Diplom */,
 				88A01228189E85600051D570 /* Frameworks */,
 				88A01227189E85600051D570 /* Products */,
+				DBEE337D87C6481CA643EB2C /* Pods-Diplom.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,6 +170,7 @@
 				88A0122B189E85600051D570 /* CoreGraphics.framework */,
 				88A0122D189E85600051D570 /* UIKit.framework */,
 				88A01248189E85600051D570 /* XCTest.framework */,
+				69C8A04EA8924043879B451E /* libPods-Diplom.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -203,6 +219,8 @@
 				88EA100618F9694500446348 /* RPDatePickerModalController.m */,
 				8811D82718F9708A00BA0171 /* RPCreateDiagnosticValuesController.h */,
 				8811D82818F9708A00BA0171 /* RPCreateDiagnosticValuesController.m */,
+				88A7C01918FA7E5C00F61293 /* RPEditDiagnosticValueController.h */,
+				88A7C01A18FA7E5C00F61293 /* RPEditDiagnosticValueController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -214,6 +232,7 @@
 				88A01266189E867F0051D570 /* RPStartView.xib */,
 				88AEEDF718B0B4E300597987 /* RPProjectModelView.xib */,
 				88663CC718F312E4008A796D /* RPCorporativeStandartsView.xib */,
+				88A7C01B18FA7E5C00F61293 /* RPEditDiagnosticValueView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -250,9 +269,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 88A01258189E85600051D570 /* Build configuration list for PBXNativeTarget "Diplom" */;
 			buildPhases = (
+				D4A90D3097F6440688136D76 /* Check Pods Manifest.lock */,
 				88A01222189E85600051D570 /* Sources */,
 				88A01223189E85600051D570 /* Frameworks */,
 				88A01224189E85600051D570 /* Resources */,
+				EF7559A3DEA34067842B766C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -324,6 +345,7 @@
 				88A01263189E86580051D570 /* RPBaseView.xib in Resources */,
 				88A01279189EA08F0051D570 /* segoeui.ttf in Resources */,
 				88663CC918F312E4008A796D /* RPCorporativeStandartsView.xib in Resources */,
+				88A7C01D18FA7E5C00F61293 /* RPEditDiagnosticValueView.xib in Resources */,
 				88A0127B189EA08F0051D570 /* segoeuii.ttf in Resources */,
 				88A0127A189EA08F0051D570 /* segoeuib.ttf in Resources */,
 				88A0127C189EA08F0051D570 /* segoeuil.ttf in Resources */,
@@ -345,6 +367,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D4A90D3097F6440688136D76 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EF7559A3DEA34067842B766C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Diplom-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		88A01222189E85600051D570 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -354,11 +409,13 @@
 				88EA100718F9694500446348 /* RPDatePickerModalController.m in Sources */,
 				88663CC818F312E4008A796D /* RPCorporativeStandartsController.m in Sources */,
 				88A01270189E86E20051D570 /* UIColorAdditions.m in Sources */,
+				88A7C01C18FA7E5C00F61293 /* RPEditDiagnosticValueController.m in Sources */,
 				88A0123A189E85600051D570 /* RPAppDelegate.m in Sources */,
 				88EA100418F95FDA00446348 /* RPBaseModalController.m in Sources */,
 				8811D82918F9708A00BA0171 /* RPCreateDiagnosticValuesController.m in Sources */,
 				88A01262189E86580051D570 /* RPBaseController.m in Sources */,
 				88A01267189E867F0051D570 /* RPStartController.m in Sources */,
+				88E5398D18FA8DC00086DACD /* RPDiagnosticState.m in Sources */,
 				8811D82C18F9725900BA0171 /* RPDiagnosticObject.m in Sources */,
 				88A01236189E85600051D570 /* main.m in Sources */,
 				88AEEDF818B0B4E300597987 /* RPProjectModelController.m in Sources */,
@@ -470,6 +527,7 @@
 		};
 		88A01259189E85600051D570 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBEE337D87C6481CA643EB2C /* Pods-Diplom.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -483,6 +541,7 @@
 		};
 		88A0125A189E85600051D570 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBEE337D87C6481CA643EB2C /* Pods-Diplom.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
