@@ -32,6 +32,10 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtNumberOfDiagnosticObjects;
 @property (weak, nonatomic) IBOutlet UIButton *btnCreateDiagnosticObjects;
 
+@property (weak, nonatomic) IBOutlet UITextField *txtNumberOfStates;
+@property (weak, nonatomic) IBOutlet UIButton *btnCreateStates;
+
 - (void) setDiagnosticValues:(NSMutableArray*)values;
+- (void) setStates:(NSMutableArray*)values;
 
 @end

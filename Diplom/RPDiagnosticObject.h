@@ -11,6 +11,6 @@
 @interface RPDiagnosticObject : NSObject
 
 @property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSArray *states;
+@property (assign, nonatomic) BOOL isBiffValue;
 
 @end

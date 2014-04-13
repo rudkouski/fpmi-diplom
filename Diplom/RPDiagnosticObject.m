@@ -13,7 +13,7 @@
 - (void)encodeWithCoder:(NSCoder *)coder;
 {
     [coder encodeObject:self.name forKey:@"name"];
-    [coder encodeObject:self.states forKey:@"states"];
+    [coder encodeBool:self.isBiffValue forKey:@"isBiffValue"];
 }
 
 - (id)initWithCoder:(NSCoder *)coder;
@@ -22,7 +22,7 @@
     if (self != nil)
     {
         self.name = [coder decodeObjectForKey:@"name"];
-        self.states = [coder decodeObjectForKey:@"states"];
+        self.isBiffValue = [coder decodeBoolForKey:@"isBiffValue"];
     }
     return self;
 }

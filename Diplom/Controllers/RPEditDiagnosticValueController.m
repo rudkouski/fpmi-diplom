@@ -43,7 +43,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.diagnosticValue.states.count;
+    return self.states.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -53,7 +53,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:(UITableViewCellStyleSubtitle) reuseIdentifier:@"Cell"];
     }
     
-    RPDiagnosticState *state = self.diagnosticValue.states[indexPath.row];
+    RPDiagnosticState *state = self.states[indexPath.row];
     
     cell.textLabel.text = state.name;
     cell.detailTextLabel.text = state.managementName;
@@ -65,7 +65,7 @@
     self.btnEditState.alpha = 1;
     self.btnEditState.enabled = YES;
     
-    RPDiagnosticState *state = [self.diagnosticValue.states objectAtIndex:indexPath.row];
+    RPDiagnosticState *state = [self.states objectAtIndex:indexPath.row];
     
     self.txtStateName.text = state.name;
     self.txtManagement.text = state.managementName;
@@ -76,37 +76,32 @@
     self.btnEditState.enabled = NO;
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    self.title = self.diagnosticValue.name;
-    self.txtValueName.text = self.diagnosticValue.name;
-}
-
 - (IBAction)onAddNewState:(id)sender {
     RPDiagnosticState *newState = [RPDiagnosticState new];
     newState.name = self.txtStateName.text;
     newState.managementName = self.txtManagement.text;
     
-    self.diagnosticValue.states = [[[NSMutableArray arrayWithArray:self.diagnosticValue.states] arrayByAddingObject:newState] copy];
+    self.states = [[[NSMutableArray arrayWithArray:self.states] arrayByAddingObject:newState] copy];
     
     [self.tblStates reloadData];
 }
 
 - (IBAction)onEditState:(id)sender {
-    NSMutableArray *tmp = [NSMutableArray arrayWithArray:self.diagnosticValue.states];
+    NSMutableArray *tmp = [NSMutableArray arrayWithArray:self.states];
     RPDiagnosticState *newState = [tmp objectAtIndex:self.tblStates.indexPathForSelectedRow.row];
     
     newState.name = self.txtStateName.text;
     newState.managementName = self.txtManagement.text;
     
-    self.diagnosticValue.states = [tmp copy];
+    self.states = [tmp copy];
     [self.tblStates reloadData];
 }
 
 - (IBAction)onRemoveSelectedState:(id)sender {
-    NSMutableArray *tmp = [NSMutableArray arrayWithArray:self.diagnosticValue.states];
+    NSMutableArray *tmp = [NSMutableArray arrayWithArray:self.states];
     [tmp removeObjectAtIndex:self.tblStates.indexPathForSelectedRow.row];
     
-    self.diagnosticValue.states = [tmp copy];
+    self.states = [tmp copy];
     [self.tblStates reloadData];
 }
 

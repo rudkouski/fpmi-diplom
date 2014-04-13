@@ -10,16 +10,19 @@
 #import "RPDatePickerModalController.h"
 #import "RPCreateDiagnosticValuesController.h"
 #import "RPModel.h"
+#import "RPStatesModalController.h"
 
 @implementation RPProjectModelController {
     NSMutableArray *diagnosticValues;
+    NSMutableArray *states;
+    
     RPModel *currentModel;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.title = @"Создание модели проекта";
+    self.title = [@"Создание модели проекта" uppercaseString];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     
     for (UIView *vwHolder in self.vwHolders) {
@@ -60,6 +63,18 @@
         }
     }
     
+    dataRepresentingSavedArray = [defaults objectForKey:@"diagnosticStates"];
+    
+    if (dataRepresentingSavedArray != nil) {
+        NSArray *oldSavedArray = [NSKeyedUnarchiver unarchiveObjectWithData:dataRepresentingSavedArray];
+        if (oldSavedArray != nil) {
+            states = [[NSMutableArray alloc] initWithArray:oldSavedArray];
+            self.txtNumberOfStates.text = @(states.count).stringValue;
+        } else {
+            states = [[NSMutableArray alloc] init];
+        }
+    }
+    
     dataRepresentingSavedArray = [defaults objectForKey:@"model"];
     
     if (dataRepresentingSavedArray != nil) {
@@ -75,6 +90,11 @@
     [[self.txtNumberOfDiagnosticObjects rac_textSignal] subscribeNext:^(NSString *text) {
         self.btnCreateDiagnosticObjects.enabled = text.length > 0;
         self.btnCreateDiagnosticObjects.alpha = text.length > 0 ? 1 : 0.5;
+    }];
+    
+    [[self.txtNumberOfStates rac_textSignal] subscribeNext:^(NSString *text) {
+        self.btnCreateStates.enabled = text.length > 0;
+        self.btnCreateStates.alpha = text.length > 0 ? 1 : 0.5;
     }];
     
     self.navigationController.navigationBar.backItem.title = @"";
@@ -134,14 +154,29 @@
     [self presentViewController:modalController animated:YES completion:nil];
 }
 
+- (IBAction)onCreateStates:(id)sender {
+    RPStatesModalController *statesController = [RPStatesModalController new];
+    statesController.numberOfValues = @(self.txtNumberOfStates.text.intValue);
+    statesController.states = states;
+    statesController.customDelegate = self;
+    
+    [self presentViewController:statesController animated:YES completion:nil];
+}
+
 - (void) setDiagnosticValues:(NSMutableArray*)values {
     diagnosticValues = values;
+}
+
+- (void) setStates:(NSMutableArray*)values {
+    states = values;
+    self.txtNumberOfStates.text = @(states.count).stringValue;
 }
 
 - (IBAction)onSaveModel:(id)sender {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     [defaults setObject:[NSKeyedArchiver archivedDataWithRootObject:diagnosticValues] forKey:@"diagnosticValues"];
+    [defaults setObject:[NSKeyedArchiver archivedDataWithRootObject:states] forKey:@"diagnosticStates"];
     
     currentModel.centerIdentificator = self.txtCenterId.text;
     currentModel.centerAddress = self.txtCenterAddress.text;

@@ -6,7 +6,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RPSimulationWithoutAIController">
             <connections>
+                <outlet property="btnStart" destination="Ybd-eV-ZIa" id="aKD-vI-us8"/>
+                <outlet property="tblSimulation" destination="zQq-Jv-aC2" id="LtR-Yy-TA3"/>
                 <outlet property="txtMethod" destination="1Nj-bE-vVk" id="cwD-tE-S0o"/>
+                <outlet property="txtNumberOfIterations" destination="UWx-dM-qX3" id="7cA-RV-2cQ"/>
+                <outlet property="txtTimeInterval" destination="POd-yy-Dap" id="pEg-EH-6GR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outletCollection property="lblTitles" destination="eC8-S7-e6U" id="HYd-or-3EN"/>
                 <outletCollection property="lblTitles" destination="31j-OW-uIe" id="zNV-ey-xQp"/>

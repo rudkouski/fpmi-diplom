@@ -20,7 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnRemoveState;
 
 @property (strong, nonatomic) id delegate;
-@property (strong, nonatomic) RPDiagnosticObject *diagnosticValue;
+@property (strong, nonatomic) NSMutableArray *states;
 @property (weak, nonatomic) IBOutlet UITableView *tblStates;
 
 @end

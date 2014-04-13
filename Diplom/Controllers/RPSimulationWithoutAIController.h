@@ -8,11 +8,16 @@
 
 #import "RPBaseController.h"
 
-@interface RPSimulationWithoutAIController : RPBaseController
+@interface RPSimulationWithoutAIController : RPBaseController <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *lblTitles;
 @property (strong, nonatomic) IBOutletCollection(UIView) NSArray *vwHolders;
 
+@property (weak, nonatomic) IBOutlet UITextField *txtNumberOfIterations;
+@property (weak, nonatomic) IBOutlet UITextField *txtTimeInterval;
 @property (weak, nonatomic) IBOutlet UITextField *txtMethod;
+
+@property (weak, nonatomic) IBOutlet UIButton *btnStart;
+@property (weak, nonatomic) IBOutlet UITableView *tblSimulation;
 
 @end

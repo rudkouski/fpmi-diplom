@@ -34,6 +34,7 @@
     rootController = [UIViewController new];
     rootController.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     rootController.view.backgroundColor = [UIColor whiteColor];
+    rootController.view.clipsToBounds = YES;
     rootController.title = self.title;
     
     UIBarButtonItem *closeButton = [[UIBarButtonItem alloc] initWithTitle:@"Отмена" style:(UIBarButtonItemStylePlain) target:self action:@selector(onClose)];
@@ -46,7 +47,7 @@
 }
 
 - (void)setCustomView:(UIView *)view {
-    view.frame = CGRectMake(20, 100, 500, 500);
+    view.frame = CGRectMake(0, 45, 500, 500);
 
     [self.view addSubview:view];
 }

@@ -39,6 +39,8 @@
 		88A3BFB218FAA81D00E975B8 /* RPSimulationWithoutAIController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A3BFB018FAA81D00E975B8 /* RPSimulationWithoutAIController.m */; };
 		88A3BFB318FAA81D00E975B8 /* RPSimulationWithoutAIView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88A3BFB118FAA81D00E975B8 /* RPSimulationWithoutAIView.xib */; };
 		88A3BFB618FAAD9600E975B8 /* RPMethodPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A3BFB518FAAD9600E975B8 /* RPMethodPickerController.m */; };
+		88A3BFB918FAF9BF00E975B8 /* RPSimulationWithoutAIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A3BFB818FAF9BF00E975B8 /* RPSimulationWithoutAIService.m */; };
+		88A3BFBD18FB0D4500E975B8 /* RPStatesModalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A3BFBC18FB0D4500E975B8 /* RPStatesModalController.m */; };
 		88A7C01C18FA7E5C00F61293 /* RPEditDiagnosticValueController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A7C01A18FA7E5C00F61293 /* RPEditDiagnosticValueController.m */; };
 		88A7C01D18FA7E5C00F61293 /* RPEditDiagnosticValueView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88A7C01B18FA7E5C00F61293 /* RPEditDiagnosticValueView.xib */; };
 		88AEEDF818B0B4E300597987 /* RPProjectModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88AEEDF618B0B4E300597987 /* RPProjectModelController.m */; };
@@ -104,6 +106,10 @@
 		88A3BFB118FAA81D00E975B8 /* RPSimulationWithoutAIView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RPSimulationWithoutAIView.xib; path = ../Controllers/RPSimulationWithoutAIView.xib; sourceTree = "<group>"; };
 		88A3BFB418FAAD9600E975B8 /* RPMethodPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPMethodPickerController.h; sourceTree = "<group>"; };
 		88A3BFB518FAAD9600E975B8 /* RPMethodPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPMethodPickerController.m; sourceTree = "<group>"; };
+		88A3BFB718FAF9BF00E975B8 /* RPSimulationWithoutAIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPSimulationWithoutAIService.h; sourceTree = "<group>"; };
+		88A3BFB818FAF9BF00E975B8 /* RPSimulationWithoutAIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPSimulationWithoutAIService.m; sourceTree = "<group>"; };
+		88A3BFBB18FB0D4500E975B8 /* RPStatesModalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPStatesModalController.h; sourceTree = "<group>"; };
+		88A3BFBC18FB0D4500E975B8 /* RPStatesModalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPStatesModalController.m; sourceTree = "<group>"; };
 		88A7C01918FA7E5C00F61293 /* RPEditDiagnosticValueController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPEditDiagnosticValueController.h; sourceTree = "<group>"; };
 		88A7C01A18FA7E5C00F61293 /* RPEditDiagnosticValueController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPEditDiagnosticValueController.m; sourceTree = "<group>"; };
 		88A7C01B18FA7E5C00F61293 /* RPEditDiagnosticValueView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RPEditDiagnosticValueView.xib; path = ../Controllers/RPEditDiagnosticValueView.xib; sourceTree = "<group>"; };
@@ -191,6 +197,7 @@
 		88A0122F189E85600051D570 /* Diplom */ = {
 			isa = PBXGroup;
 			children = (
+				88A3BFBA18FAF9C900E975B8 /* Services */,
 				8811D82D18F9726100BA0171 /* Models */,
 				88A0126A189E86E20051D570 /* Helpers */,
 				88A01269189E868B0051D570 /* Views */,
@@ -238,6 +245,8 @@
 				88A3BFB018FAA81D00E975B8 /* RPSimulationWithoutAIController.m */,
 				88A3BFB418FAAD9600E975B8 /* RPMethodPickerController.h */,
 				88A3BFB518FAAD9600E975B8 /* RPMethodPickerController.m */,
+				88A3BFBB18FB0D4500E975B8 /* RPStatesModalController.h */,
+				88A3BFBC18FB0D4500E975B8 /* RPStatesModalController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -278,6 +287,15 @@
 				88A01278189EA08F0051D570 /* seguisb.ttf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		88A3BFBA18FAF9C900E975B8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				88A3BFB718FAF9BF00E975B8 /* RPSimulationWithoutAIService.h */,
+				88A3BFB818FAF9BF00E975B8 /* RPSimulationWithoutAIService.m */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -427,8 +445,10 @@
 				88A0126F189E86E20051D570 /* RPEventHelper.m in Sources */,
 				88EA100718F9694500446348 /* RPDatePickerModalController.m in Sources */,
 				88663CC818F312E4008A796D /* RPCorporativeStandartsController.m in Sources */,
+				88A3BFBD18FB0D4500E975B8 /* RPStatesModalController.m in Sources */,
 				88A01270189E86E20051D570 /* UIColorAdditions.m in Sources */,
 				88A7C01C18FA7E5C00F61293 /* RPEditDiagnosticValueController.m in Sources */,
+				88A3BFB918FAF9BF00E975B8 /* RPSimulationWithoutAIService.m in Sources */,
 				88A0123A189E85600051D570 /* RPAppDelegate.m in Sources */,
 				88EA100418F95FDA00446348 /* RPBaseModalController.m in Sources */,
 				8811D82918F9708A00BA0171 /* RPCreateDiagnosticValuesController.m in Sources */,
@@ -553,10 +573,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Fiverun, Inc.";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Diplom/Diplom-Prefix.pch";
 				INFOPLIST_FILE = "Diplom/Diplom-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "A8835C96-3DD5-4E32-A361-E54A5AA0B4A4";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -567,10 +589,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Fiverun, Inc.";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Diplom/Diplom-Prefix.pch";
 				INFOPLIST_FILE = "Diplom/Diplom-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "A8835C96-3DD5-4E32-A361-E54A5AA0B4A4";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
