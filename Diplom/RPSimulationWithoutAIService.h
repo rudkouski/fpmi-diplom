@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum : NSUInteger {
+typedef enum {
     SimulationMethodEvklid,
     SimulationMethodMahalanobis,
     SimulationMethodCombined,

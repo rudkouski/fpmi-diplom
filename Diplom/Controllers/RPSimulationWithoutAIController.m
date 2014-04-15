@@ -83,9 +83,19 @@
         self.btnStart.enabled = NO;
         [self.txtNumberOfIterations resignFirstResponder];
     }] subscribeNext:^(id x) {
+        if ([self.txtMethod.text isEqualToString:@"Евклида"]) {
         simulationResult = [RPSimulationWithoutAIService simulationWithNumberOfIterations:self.txtNumberOfIterations.text.integerValue
                                                                   time:self.txtTimeInterval.text.floatValue
-                                                           usingMethod:(SimulationMethodEvklid)];
+                                                                              usingMethod:(SimulationMethodEvklid)];
+        } else if ([self.txtMethod.text isEqualToString:@"Махалалобиса"]){
+            simulationResult = [RPSimulationWithoutAIService simulationWithNumberOfIterations:self.txtNumberOfIterations.text.integerValue
+                                                                                         time:self.txtTimeInterval.text.floatValue
+                                                                                  usingMethod:(SimulationMethodMahalanobis)];
+        } else {
+            simulationResult = [RPSimulationWithoutAIService simulationWithNumberOfIterations:self.txtNumberOfIterations.text.integerValue
+                                                                                         time:self.txtTimeInterval.text.floatValue
+                                                                                  usingMethod:(SimulationMethodCombined)];
+        }
         [self startSimulating];
     }];
 }

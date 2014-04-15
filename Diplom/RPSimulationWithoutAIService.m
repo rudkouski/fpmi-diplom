@@ -100,6 +100,48 @@
     return result;
 }
 
++ (RPDiagnosticState*)findStateWithMahalanobis:(NSMutableArray*)input {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSData *dataRepresentingSavedArray = [defaults objectForKey:@"diagnosticStates"];
+    NSMutableArray *diagnosticStates;
+    
+    if (dataRepresentingSavedArray != nil) {
+        NSArray *oldSavedArray = [NSKeyedUnarchiver unarchiveObjectWithData:dataRepresentingSavedArray];
+        if (oldSavedArray != nil) {
+            diagnosticStates = [[NSMutableArray alloc] initWithArray:oldSavedArray];
+        }
+    } else return nil;
+    
+    RPDiagnosticState *result;
+    CGFloat min = CGFLOAT_MAX;
+    
+    for (RPDiagnosticState *singleState in diagnosticStates) {
+        if (input.count == singleState.etalon.count) {
+            
+            CGFloat diff = 0.0;
+            
+            for (NSInteger index = 0; index < singleState.etalon.count; index++) {
+                NSString *tmp = singleState.etalon[index];
+                
+                CGFloat x = tmp.floatValue;
+                CGFloat y = ((NSNumber*)input[index]).floatValue;
+                
+                CGFloat sr = sqrtf(0.5*()
+                
+                diff += fabs(tmp.floatValue - ((NSNumber*)input[index]).floatValue);
+            }
+            
+            if (diff < min) {
+                min = diff;
+                result = singleState;
+            }
+        }
+    }
+    
+    return result;
+}
+
 + (NSArray*) mahalanobisSimulationWithNumberOfIterations:(NSInteger)numberOfIterations time:(CGFloat)time {
     return nil;
 }
