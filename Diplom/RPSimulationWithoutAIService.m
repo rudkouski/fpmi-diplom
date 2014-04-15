@@ -8,6 +8,8 @@
 
 #import "RPSimulationWithoutAIService.h"
 #import "RPDiagnosticObject.h"
+#import "RPDiagnosticState.h"
+#import "RPSimulationResult.h"
 
 #define ARC4RANDOM_MAX 0x100000000
 
@@ -41,6 +43,8 @@
     
     NSMutableArray *result = [NSMutableArray new];
 
+    NSDate *date = [NSDate date];
+    
     for (NSInteger index = 0; index < numberOfIterations; index++) {
         NSMutableArray *singleResult = [NSMutableArray new];
         
@@ -49,7 +53,48 @@
             [singleResult addObject:@(val)];
         }
         
-        [result addObject:singleResult];
+        RPSimulationResult *simulationResult = [RPSimulationResult new];
+        simulationResult.resultVector = singleResult;
+        simulationResult.state = [self findStateWithEvklid:singleResult];
+        simulationResult.date = [date dateByAddingTimeInterval:time*index];
+        
+        [result addObject:simulationResult];
+    }
+    
+    return result;
+}
+
++ (RPDiagnosticState*)findStateWithEvklid:(NSMutableArray*)input {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSData *dataRepresentingSavedArray = [defaults objectForKey:@"diagnosticStates"];
+    NSMutableArray *diagnosticStates;
+    
+    if (dataRepresentingSavedArray != nil) {
+        NSArray *oldSavedArray = [NSKeyedUnarchiver unarchiveObjectWithData:dataRepresentingSavedArray];
+        if (oldSavedArray != nil) {
+            diagnosticStates = [[NSMutableArray alloc] initWithArray:oldSavedArray];
+        }
+    } else return nil;
+    
+    RPDiagnosticState *result;
+    CGFloat min = CGFLOAT_MAX;
+    
+    for (RPDiagnosticState *singleState in diagnosticStates) {
+        if (input.count == singleState.etalon.count) {
+            
+            CGFloat diff = 0.0;
+            
+            for (NSInteger index = 0; index < singleState.etalon.count; index++) {
+                NSString *tmp = singleState.etalon[index];
+                diff += fabs(tmp.floatValue - ((NSNumber*)input[index]).floatValue);
+            }
+            
+            if (diff < min) {
+                min = diff;
+                result = singleState;
+            }
+        }
     }
     
     return result;

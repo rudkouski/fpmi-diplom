@@ -8,10 +8,12 @@
             <connections>
                 <outlet property="btnStart" destination="Ybd-eV-ZIa" id="aKD-vI-us8"/>
                 <outlet property="tblSimulation" destination="zQq-Jv-aC2" id="LtR-Yy-TA3"/>
+                <outlet property="tblStatistics" destination="MSH-nI-dEl" id="f5H-On-ZTg"/>
                 <outlet property="txtMethod" destination="1Nj-bE-vVk" id="cwD-tE-S0o"/>
                 <outlet property="txtNumberOfIterations" destination="UWx-dM-qX3" id="7cA-RV-2cQ"/>
                 <outlet property="txtTimeInterval" destination="POd-yy-Dap" id="pEg-EH-6GR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="vwProgress" destination="HrW-hB-TbY" id="6fS-XA-3gH"/>
                 <outletCollection property="lblTitles" destination="eC8-S7-e6U" id="HYd-or-3EN"/>
                 <outletCollection property="lblTitles" destination="31j-OW-uIe" id="zNV-ey-xQp"/>
                 <outletCollection property="lblTitles" destination="xGP-6J-oov" id="thH-ck-nAd"/>
@@ -87,6 +89,37 @@
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PHL-gH-9Io">
                     <rect key="frame" x="15" y="387" width="409" height="361"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="30" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="MSH-nI-dEl">
+                            <rect key="frame" x="20" y="90" width="369" height="200"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="1Nl-hk-x8u"/>
+                                <outlet property="delegate" destination="-1" id="CMP-Bn-Q9r"/>
+                            </connections>
+                        </tableView>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Состояние" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxo-Yl-A06">
+                            <rect key="frame" x="20" y="61" width="151" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Количество" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNx-Y3-nQ9">
+                            <rect key="frame" x="238" y="61" width="151" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HrW-hB-TbY">
+                            <rect key="frame" x="20" y="40" width="369" height="2"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="tintColor" red="0.91372549020000005" green="0.3411764706" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                        </progressView>
+                    </subviews>
                     <color key="backgroundColor" white="0.66666666669999997" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I1N-bx-ROF">
@@ -96,8 +129,8 @@
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="zQq-Jv-aC2">
                             <rect key="frame" x="20" y="36" width="537" height="595"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </tableView>
                     </subviews>
                     <color key="backgroundColor" white="0.66666666669999997" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>

@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RPProjectModelController">
             <connections>
                 <outlet property="btnCreateDiagnosticObjects" destination="ibY-0A-HWi" id="dmX-qR-qQi"/>
+                <outlet property="btnCreateEtalons" destination="gUo-OR-6XR" id="o48-dK-wMA"/>
                 <outlet property="btnCreateStates" destination="QSs-23-5OB" id="Oa5-J7-WFM"/>
                 <outlet property="txtCenterAddress" destination="dtF-ab-VMq" id="S8U-UX-RLg"/>
                 <outlet property="txtCenterCommunications" destination="lc8-eU-ILb" id="RDg-I3-X1L"/>
@@ -309,7 +310,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.58039215690000001" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <state key="normal" title="Создать показатели">
+                                        <state key="normal" title="Создать состояния">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -329,6 +330,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onCreateEtalons:" destination="-1" eventType="touchUpInside" id="6nE-gb-UDb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="est-WZ-egX">
                                 <rect key="frame" x="601" y="601" width="200" height="50"/>

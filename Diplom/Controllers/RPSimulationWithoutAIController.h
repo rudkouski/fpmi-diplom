@@ -19,5 +19,8 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *btnStart;
 @property (weak, nonatomic) IBOutlet UITableView *tblSimulation;
+@property (weak, nonatomic) IBOutlet UITableView *tblStatistics;
+
+@property (weak, nonatomic) IBOutlet UIProgressView *vwProgress;
 
 @end

@@ -9,17 +9,41 @@
 #import "RPSimulationWithoutAIController.h"
 #import "RPMethodPickerController.h"
 #import "RPSimulationWithoutAIService.h"
+#import "RPDiagnosticState.h"
+#import "RPSimulationResult.h"
+#import "RPSimulationResultCell.h"
 
 @implementation RPSimulationWithoutAIController {
     UIPopoverController *methodPicker;
     RPMethodPickerController *methodsController;
     
+    NSMutableArray *displayingResult;
     NSArray *simulationResult;
+    NSArray *states;
+    NSMutableDictionary *stateCounts;
+    
+    NSInteger currentIndex;
+    NSTimer *currentTimer;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    stateCounts = [NSMutableDictionary new];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSData *dataRepresentingSavedArray = [defaults objectForKey:@"diagnosticStates"];
+    NSMutableArray *diagnosticStates;
+    
+    if (dataRepresentingSavedArray != nil) {
+        NSArray *oldSavedArray = [NSKeyedUnarchiver unarchiveObjectWithData:dataRepresentingSavedArray];
+        if (oldSavedArray != nil) {
+            diagnosticStates = [[NSMutableArray alloc] initWithArray:oldSavedArray];
+            states = diagnosticStates;
+        }
+    }
     
     self.title = [@"Моделирование без AI-модуля" uppercaseString];
     
@@ -57,13 +81,58 @@
     [[[self.btnStart rac_signalForControlEvents:(UIControlEventTouchUpInside)] doNext:^(id x) {
         self.btnStart.alpha = 0.5;
         self.btnStart.enabled = NO;
+        [self.txtNumberOfIterations resignFirstResponder];
     }] subscribeNext:^(id x) {
         simulationResult = [RPSimulationWithoutAIService simulationWithNumberOfIterations:self.txtNumberOfIterations.text.integerValue
                                                                   time:self.txtTimeInterval.text.floatValue
                                                            usingMethod:(SimulationMethodEvklid)];
-        
-        [self.tblSimulation reloadData];
+        [self startSimulating];
     }];
+}
+
+- (void) startSimulating {
+    currentIndex = 0;
+    displayingResult = [NSMutableArray new];
+    
+    currentTimer = [NSTimer scheduledTimerWithTimeInterval:self.txtTimeInterval.text.floatValue
+                                                    target:self
+                                                  selector:@selector(addResult)
+                                                  userInfo:nil
+                                                   repeats:YES];
+}
+
+- (void) addResult {
+    if (currentIndex < simulationResult.count) {
+        [displayingResult addObject:simulationResult[currentIndex]];
+        
+        [self getStatesCount];
+        
+        [self.tblStatistics reloadData];
+        [self.tblSimulation reloadData];
+        
+        [self.tblSimulation scrollToRowAtIndexPath:[NSIndexPath indexPathForItem:currentIndex inSection:0] atScrollPosition:(UITableViewScrollPositionBottom) animated:YES];
+        
+        currentIndex++;
+        
+        [self.vwProgress setProgress:(currentIndex/(float)simulationResult.count)];
+    } else {
+        [currentTimer invalidate];
+    }
+}
+
+- (void) getStatesCount {
+    stateCounts = [NSMutableDictionary new];
+    
+    for (RPSimulationResult *singleResult in displayingResult) {
+        if (stateCounts[singleResult.state.name] == nil) {
+            [stateCounts setObject:@(1) forKey:singleResult.state.name];
+        } else {
+            NSNumber *count = stateCounts[singleResult.state.name];
+            [stateCounts setObject:@(count.integerValue + 1) forKey:singleResult.state.name];
+        }
+    }
+    
+    [self.tblStatistics reloadData];
 }
 
 - (BOOL) textFieldShouldBeginEditing:(UITextField *)textField {
@@ -89,21 +158,65 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return simulationResult.count;
+    if (tableView == self.tblStatistics) {
+        return states.count;
+    }
+    return displayingResult.count;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    return [UIView new];
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (tableView == self.tblStatistics) {
+        return 30;
+    }
+    return 60;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [self.tblSimulation dequeueReusableCellWithIdentifier:@"Cell"];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:@"Cell"];
+    if (tableView == self.tblStatistics) {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Stat_cell"];
+        
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:(UITableViewCellStyleValue1) reuseIdentifier:@"Stat_cell"];
+        }
+        RPDiagnosticState *tmp = states[indexPath.row];
+        
+        cell.backgroundColor = [UIColor clearColor];
+        cell.textLabel.text = tmp.name;
+        cell.detailTextLabel.text = ((NSNumber*)stateCounts[tmp.name]).stringValue;
+        
+        return cell;
+    } else {
+        RPSimulationResultCell *cell = [self.tblSimulation dequeueReusableCellWithIdentifier:@"Cell"];
+        
+        if (cell == nil) {
+            [tableView registerNib:[UINib nibWithNibName:@"RPSimulationResultCell" bundle:nil] forCellReuseIdentifier:@"Cell"];
+            cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+        }
+        
+        RPSimulationResult *result = displayingResult[indexPath.row];
+        
+        cell.lblStateName.text = result.state.name;
+        cell.lblManageName.text = result.state.managementName;
+        cell.lblIndex.text = [NSString stringWithFormat:@"%d", indexPath.row + 1];
+        cell.lblDate.text = [NSDateFormatter localizedStringFromDate:result.date
+                                                           dateStyle:NSDateFormatterShortStyle
+                                                           timeStyle:NSDateFormatterShortStyle];
+        NSMutableArray *array = [NSMutableArray new];
+        
+        for (NSNumber *value in result.resultVector) {
+            NSLog(@"%.2F", [value floatValue]);
+            
+            [array addObject:[NSString stringWithFormat:@"%.2F", value.floatValue]];
+        }
+        
+        cell.lblVector.text = [NSString stringWithFormat:@"(%@)", [array componentsJoinedByString:@", "]];
+        
+        return cell;
     }
-    
-    NSArray *tmp = simulationResult[indexPath.row];
-    
-    cell.textLabel.text = [tmp componentsJoinedByString:@", "];
-    
-    return cell;
 }
 
 

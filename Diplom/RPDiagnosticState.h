@@ -12,5 +12,6 @@
 
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *managementName;
+@property (strong, nonatomic) NSArray *etalon;
 
 @end

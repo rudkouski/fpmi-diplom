@@ -14,6 +14,7 @@
 {
     [coder encodeObject:self.name forKey:@"name"];
     [coder encodeObject:self.managementName forKey:@"managementName"];
+    [coder encodeObject:self.etalon forKey:@"etalon"];
 }
 
 - (id)initWithCoder:(NSCoder *)coder;
@@ -23,7 +24,9 @@
     {
         self.name = [coder decodeObjectForKey:@"name"];
         self.managementName = [coder decodeObjectForKey:@"managementName"];
+        self.etalon = [coder decodeObjectForKey:@"etalon"];
     }
+    
     return self;
 }
 

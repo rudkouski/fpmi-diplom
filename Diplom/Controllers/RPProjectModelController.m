@@ -11,6 +11,7 @@
 #import "RPCreateDiagnosticValuesController.h"
 #import "RPModel.h"
 #import "RPStatesModalController.h"
+#import "RPEtalonController.h"
 
 @implementation RPProjectModelController {
     NSMutableArray *diagnosticValues;
@@ -87,6 +88,27 @@
         }
     }
     
+    RACSignal *objectsSignal = [[self.txtNumberOfDiagnosticObjects rac_textSignal] map:^id(NSString *value) {
+        return @(value.length > 0);
+    }];
+    
+    RACSignal *statesSignal = [[self.txtNumberOfStates rac_textSignal] map:^id(NSString *value) {
+        return @(value.length > 0);
+    }];
+    
+    
+    [[RACSignal combineLatest:@[objectsSignal, statesSignal] reduce:^id(NSNumber *objects, NSNumber *statesBool){
+        return @(objects.boolValue && statesBool.boolValue);
+    }] subscribeNext:^(NSNumber *x) {
+        if (x.boolValue) {
+            self.btnCreateEtalons.alpha = 1;
+            self.btnCreateEtalons.enabled = YES;
+        } else {
+            self.btnCreateEtalons.alpha = 0.5;
+            self.btnCreateEtalons.enabled = NO;
+        }
+    }];
+    
     [[self.txtNumberOfDiagnosticObjects rac_textSignal] subscribeNext:^(NSString *text) {
         self.btnCreateDiagnosticObjects.enabled = text.length > 0;
         self.btnCreateDiagnosticObjects.alpha = text.length > 0 ? 1 : 0.5;
@@ -152,6 +174,15 @@
     modalController.diagnosticValues = diagnosticValues;
     
     [self presentViewController:modalController animated:YES completion:nil];
+}
+
+- (IBAction)onCreateEtalons:(id)sender {
+    RPEtalonController *etalonController = [RPEtalonController new];
+    etalonController.customDelegate = self;
+    etalonController.states = states;
+    etalonController.values = diagnosticValues;
+    
+    [self presentViewController:etalonController animated:YES completion:nil];
 }
 
 - (IBAction)onCreateStates:(id)sender {
