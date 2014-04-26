@@ -17,7 +17,7 @@
 		88A0122E189E85600051D570 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A0122D189E85600051D570 /* UIKit.framework */; };
 		88A01234189E85600051D570 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 88A01232189E85600051D570 /* InfoPlist.strings */; };
 		88A01236189E85600051D570 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A01235189E85600051D570 /* main.m */; };
-		88A0123A189E85600051D570 /* RPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A01239189E85600051D570 /* RPAppDelegate.m */; };
+		88A0123A189E85600051D570 /* RPAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 88A01239189E85600051D570 /* RPAppDelegate.mm */; };
 		88A01242189E85600051D570 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88A01241189E85600051D570 /* Images.xcassets */; };
 		88A01249189E85600051D570 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A01248189E85600051D570 /* XCTest.framework */; };
 		88A0124A189E85600051D570 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A01229189E85600051D570 /* Foundation.framework */; };
@@ -39,7 +39,7 @@
 		88A3BFB218FAA81D00E975B8 /* RPSimulationWithoutAIController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A3BFB018FAA81D00E975B8 /* RPSimulationWithoutAIController.m */; };
 		88A3BFB318FAA81D00E975B8 /* RPSimulationWithoutAIView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88A3BFB118FAA81D00E975B8 /* RPSimulationWithoutAIView.xib */; };
 		88A3BFB618FAAD9600E975B8 /* RPMethodPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A3BFB518FAAD9600E975B8 /* RPMethodPickerController.m */; };
-		88A3BFB918FAF9BF00E975B8 /* RPSimulationWithoutAIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A3BFB818FAF9BF00E975B8 /* RPSimulationWithoutAIService.m */; };
+		88A3BFB918FAF9BF00E975B8 /* RPSimulationWithoutAIService.mm in Sources */ = {isa = PBXBuildFile; fileRef = 88A3BFB818FAF9BF00E975B8 /* RPSimulationWithoutAIService.mm */; };
 		88A3BFBD18FB0D4500E975B8 /* RPStatesModalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A3BFBC18FB0D4500E975B8 /* RPStatesModalController.m */; };
 		88A7C01C18FA7E5C00F61293 /* RPEditDiagnosticValueController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A7C01A18FA7E5C00F61293 /* RPEditDiagnosticValueController.m */; };
 		88A7C01D18FA7E5C00F61293 /* RPEditDiagnosticValueView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88A7C01B18FA7E5C00F61293 /* RPEditDiagnosticValueView.xib */; };
@@ -82,7 +82,7 @@
 		88A01235189E85600051D570 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		88A01237189E85600051D570 /* Diplom-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Diplom-Prefix.pch"; sourceTree = "<group>"; };
 		88A01238189E85600051D570 /* RPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RPAppDelegate.h; sourceTree = "<group>"; };
-		88A01239189E85600051D570 /* RPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RPAppDelegate.m; sourceTree = "<group>"; };
+		88A01239189E85600051D570 /* RPAppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RPAppDelegate.mm; sourceTree = "<group>"; };
 		88A01241189E85600051D570 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		88A01247189E85600051D570 /* DiplomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiplomTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A01248189E85600051D570 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -111,7 +111,7 @@
 		88A3BFB418FAAD9600E975B8 /* RPMethodPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPMethodPickerController.h; sourceTree = "<group>"; };
 		88A3BFB518FAAD9600E975B8 /* RPMethodPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPMethodPickerController.m; sourceTree = "<group>"; };
 		88A3BFB718FAF9BF00E975B8 /* RPSimulationWithoutAIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPSimulationWithoutAIService.h; sourceTree = "<group>"; };
-		88A3BFB818FAF9BF00E975B8 /* RPSimulationWithoutAIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPSimulationWithoutAIService.m; sourceTree = "<group>"; };
+		88A3BFB818FAF9BF00E975B8 /* RPSimulationWithoutAIService.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RPSimulationWithoutAIService.mm; sourceTree = "<group>"; };
 		88A3BFBB18FB0D4500E975B8 /* RPStatesModalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPStatesModalController.h; sourceTree = "<group>"; };
 		88A3BFBC18FB0D4500E975B8 /* RPStatesModalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPStatesModalController.m; sourceTree = "<group>"; };
 		88A7C01918FA7E5C00F61293 /* RPEditDiagnosticValueController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPEditDiagnosticValueController.h; sourceTree = "<group>"; };
@@ -216,7 +216,7 @@
 				88A01269189E868B0051D570 /* Views */,
 				88A0125E189E86420051D570 /* Controllers */,
 				88A01238189E85600051D570 /* RPAppDelegate.h */,
-				88A01239189E85600051D570 /* RPAppDelegate.m */,
+				88A01239189E85600051D570 /* RPAppDelegate.mm */,
 				88A01241189E85600051D570 /* Images.xcassets */,
 				88A01230189E85600051D570 /* Supporting Files */,
 			);
@@ -309,7 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				88A3BFB718FAF9BF00E975B8 /* RPSimulationWithoutAIService.h */,
-				88A3BFB818FAF9BF00E975B8 /* RPSimulationWithoutAIService.m */,
+				88A3BFB818FAF9BF00E975B8 /* RPSimulationWithoutAIService.mm */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -476,8 +476,8 @@
 				88A3BFBD18FB0D4500E975B8 /* RPStatesModalController.m in Sources */,
 				88A01270189E86E20051D570 /* UIColorAdditions.m in Sources */,
 				88A7C01C18FA7E5C00F61293 /* RPEditDiagnosticValueController.m in Sources */,
-				88A3BFB918FAF9BF00E975B8 /* RPSimulationWithoutAIService.m in Sources */,
-				88A0123A189E85600051D570 /* RPAppDelegate.m in Sources */,
+				88A3BFB918FAF9BF00E975B8 /* RPSimulationWithoutAIService.mm in Sources */,
+				88A0123A189E85600051D570 /* RPAppDelegate.mm in Sources */,
 				88B72CA118FDB0C7000EF289 /* RPSimulationResult.m in Sources */,
 				88EA100418F95FDA00446348 /* RPBaseModalController.m in Sources */,
 				8811D82918F9708A00BA0171 /* RPCreateDiagnosticValuesController.m in Sources */,

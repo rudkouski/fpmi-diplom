@@ -8,6 +8,7 @@
 
 #import "RPAppDelegate.h"
 #import "RPStartController.h"
+#import <opencv2/opencv.hpp>
 
 @implementation RPAppDelegate
 

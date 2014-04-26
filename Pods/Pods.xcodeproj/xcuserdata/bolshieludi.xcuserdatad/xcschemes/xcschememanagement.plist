@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Diplom-OpenCV.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Diplom-ReactiveCocoa.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>15762576430D439E9DF527C6</key>
+		<key>333C6A2A1E12425CB638975F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>644200AB250646159403C747</key>
+		<key>3861E686A2CB4457831A0F84</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>84615ADA3EF14E55828C8A99</key>
+		<key>91436D89D5CC4B42B07F9062</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E6343BE1F1004E9C9F1A5E17</key>
+		<key>9DFB1BCFD0FF45549BC6C207</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F541B58A668742AEB7B6A9B0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

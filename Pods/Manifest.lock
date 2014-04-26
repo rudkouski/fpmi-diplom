@@ -2,6 +2,7 @@ PODS:
   - MagicalRecord (2.2):
     - MagicalRecord/Core
   - MagicalRecord/Core (2.2)
+  - OpenCV (2.4.8)
   - ReactiveCocoa (2.3):
     - ReactiveCocoa/Core
     - ReactiveCocoa/no-arc
@@ -12,11 +13,13 @@ PODS:
 
 DEPENDENCIES:
   - MagicalRecord
+  - OpenCV
   - ReactiveCocoa
   - SVProgressHUD
 
 SPEC CHECKSUMS:
   MagicalRecord: 95d49d74ef752cd52f6ad87bcb474817fc3978cf
+  OpenCV: 418f74b9632e02f9968cc61d5fae23674fc5151a
   ReactiveCocoa: 1f6265f9d521923d3efcc37b00722cefc16df269
   SVProgressHUD: 5e10939a296debf5fe5a5895eda9539b8b2114f1
 
