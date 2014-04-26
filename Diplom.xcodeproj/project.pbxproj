@@ -10,6 +10,12 @@
 		31F65AFA423146F0A424E02B /* libPods-Diplom.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C8A04EA8924043879B451E /* libPods-Diplom.a */; };
 		8811D82918F9708A00BA0171 /* RPCreateDiagnosticValuesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8811D82818F9708A00BA0171 /* RPCreateDiagnosticValuesController.m */; };
 		8811D82C18F9725900BA0171 /* RPDiagnosticObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8811D82B18F9725900BA0171 /* RPDiagnosticObject.m */; };
+		88216277190C0D9D008BB0B4 /* RPModelPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88216275190C0D9D008BB0B4 /* RPModelPreviewController.m */; };
+		88216278190C0D9D008BB0B4 /* RPModelPreviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88216276190C0D9D008BB0B4 /* RPModelPreviewView.xib */; };
+		8821627C190C0FE3008BB0B4 /* RPModelPreviewModalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8821627A190C0FE3008BB0B4 /* RPModelPreviewModalController.m */; };
+		8821627D190C0FE3008BB0B4 /* RPModelPreviewModalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8821627B190C0FE3008BB0B4 /* RPModelPreviewModalView.xib */; };
+		88216280190C11A1008BB0B4 /* RPModelPreviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8821627F190C11A1008BB0B4 /* RPModelPreviewCell.m */; };
+		88216282190C11BD008BB0B4 /* RPModelPreviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88216281190C11BD008BB0B4 /* RPModelPreviewCell.xib */; };
 		88663CC818F312E4008A796D /* RPCorporativeStandartsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88663CC618F312E4008A796D /* RPCorporativeStandartsController.m */; };
 		88663CC918F312E4008A796D /* RPCorporativeStandartsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88663CC718F312E4008A796D /* RPCorporativeStandartsView.xib */; };
 		88A0122A189E85600051D570 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A01229189E85600051D570 /* Foundation.framework */; };
@@ -70,6 +76,15 @@
 		8811D82818F9708A00BA0171 /* RPCreateDiagnosticValuesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPCreateDiagnosticValuesController.m; sourceTree = "<group>"; };
 		8811D82A18F9725900BA0171 /* RPDiagnosticObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPDiagnosticObject.h; sourceTree = "<group>"; };
 		8811D82B18F9725900BA0171 /* RPDiagnosticObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPDiagnosticObject.m; sourceTree = "<group>"; };
+		88216274190C0D9D008BB0B4 /* RPModelPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPModelPreviewController.h; sourceTree = "<group>"; };
+		88216275190C0D9D008BB0B4 /* RPModelPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPModelPreviewController.m; sourceTree = "<group>"; };
+		88216276190C0D9D008BB0B4 /* RPModelPreviewView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RPModelPreviewView.xib; path = ../Controllers/RPModelPreviewView.xib; sourceTree = "<group>"; };
+		88216279190C0FE3008BB0B4 /* RPModelPreviewModalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPModelPreviewModalController.h; sourceTree = "<group>"; };
+		8821627A190C0FE3008BB0B4 /* RPModelPreviewModalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPModelPreviewModalController.m; sourceTree = "<group>"; };
+		8821627B190C0FE3008BB0B4 /* RPModelPreviewModalView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RPModelPreviewModalView.xib; path = ../Controllers/RPModelPreviewModalView.xib; sourceTree = "<group>"; };
+		8821627E190C11A1008BB0B4 /* RPModelPreviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPModelPreviewCell.h; sourceTree = "<group>"; };
+		8821627F190C11A1008BB0B4 /* RPModelPreviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPModelPreviewCell.m; sourceTree = "<group>"; };
+		88216281190C11BD008BB0B4 /* RPModelPreviewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RPModelPreviewCell.xib; sourceTree = "<group>"; };
 		88663CC518F312E4008A796D /* RPCorporativeStandartsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPCorporativeStandartsController.h; sourceTree = "<group>"; };
 		88663CC618F312E4008A796D /* RPCorporativeStandartsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPCorporativeStandartsController.m; sourceTree = "<group>"; };
 		88663CC718F312E4008A796D /* RPCorporativeStandartsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RPCorporativeStandartsView.xib; path = ../Controllers/RPCorporativeStandartsView.xib; sourceTree = "<group>"; };
@@ -262,7 +277,11 @@
 				88A3BFBC18FB0D4500E975B8 /* RPStatesModalController.m */,
 				88B72C9C18FD9DEA000EF289 /* RPEtalonController.h */,
 				88B72C9D18FD9DEA000EF289 /* RPEtalonController.m */,
+				88216274190C0D9D008BB0B4 /* RPModelPreviewController.h */,
+				88216275190C0D9D008BB0B4 /* RPModelPreviewController.m */,
 				88B72CA718FDB519000EF289 /* Cell */,
+				88216279190C0FE3008BB0B4 /* RPModelPreviewModalController.h */,
+				8821627A190C0FE3008BB0B4 /* RPModelPreviewModalController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -276,6 +295,8 @@
 				88663CC718F312E4008A796D /* RPCorporativeStandartsView.xib */,
 				88A7C01B18FA7E5C00F61293 /* RPEditDiagnosticValueView.xib */,
 				88A3BFB118FAA81D00E975B8 /* RPSimulationWithoutAIView.xib */,
+				88216276190C0D9D008BB0B4 /* RPModelPreviewView.xib */,
+				8821627B190C0FE3008BB0B4 /* RPModelPreviewModalView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -320,6 +341,9 @@
 				88B72CA218FDB515000EF289 /* RPSimulationResultCell.h */,
 				88B72CA318FDB515000EF289 /* RPSimulationResultCell.m */,
 				88B72CA418FDB515000EF289 /* RPSimulationResultCell.xib */,
+				8821627E190C11A1008BB0B4 /* RPModelPreviewCell.h */,
+				8821627F190C11A1008BB0B4 /* RPModelPreviewCell.m */,
+				88216281190C11BD008BB0B4 /* RPModelPreviewCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -405,11 +429,13 @@
 			files = (
 				88A01242189E85600051D570 /* Images.xcassets in Resources */,
 				88B72CA618FDB515000EF289 /* RPSimulationResultCell.xib in Resources */,
+				88216278190C0D9D008BB0B4 /* RPModelPreviewView.xib in Resources */,
 				88A01263189E86580051D570 /* RPBaseView.xib in Resources */,
 				88A01279189EA08F0051D570 /* segoeui.ttf in Resources */,
 				88663CC918F312E4008A796D /* RPCorporativeStandartsView.xib in Resources */,
 				88A3BFB318FAA81D00E975B8 /* RPSimulationWithoutAIView.xib in Resources */,
 				88A7C01D18FA7E5C00F61293 /* RPEditDiagnosticValueView.xib in Resources */,
+				8821627D190C0FE3008BB0B4 /* RPModelPreviewModalView.xib in Resources */,
 				88A0127B189EA08F0051D570 /* segoeuii.ttf in Resources */,
 				88A0127A189EA08F0051D570 /* segoeuib.ttf in Resources */,
 				88A0127C189EA08F0051D570 /* segoeuil.ttf in Resources */,
@@ -417,6 +443,7 @@
 				88AEEDF918B0B4E300597987 /* RPProjectModelView.xib in Resources */,
 				88A0127E189EA08F0051D570 /* segoeuiz.ttf in Resources */,
 				88A01268189E867F0051D570 /* RPStartView.xib in Resources */,
+				88216282190C11BD008BB0B4 /* RPModelPreviewCell.xib in Resources */,
 				88A0127F189EA08F0051D570 /* seguisb.ttf in Resources */,
 				88A01234189E85600051D570 /* InfoPlist.strings in Resources */,
 			);
@@ -478,6 +505,7 @@
 				88A7C01C18FA7E5C00F61293 /* RPEditDiagnosticValueController.m in Sources */,
 				88A3BFB918FAF9BF00E975B8 /* RPSimulationWithoutAIService.mm in Sources */,
 				88A0123A189E85600051D570 /* RPAppDelegate.mm in Sources */,
+				88216280190C11A1008BB0B4 /* RPModelPreviewCell.m in Sources */,
 				88B72CA118FDB0C7000EF289 /* RPSimulationResult.m in Sources */,
 				88EA100418F95FDA00446348 /* RPBaseModalController.m in Sources */,
 				8811D82918F9708A00BA0171 /* RPCreateDiagnosticValuesController.m in Sources */,
@@ -485,9 +513,11 @@
 				88A01262189E86580051D570 /* RPBaseController.m in Sources */,
 				88A01267189E867F0051D570 /* RPStartController.m in Sources */,
 				88B72CA518FDB515000EF289 /* RPSimulationResultCell.m in Sources */,
+				8821627C190C0FE3008BB0B4 /* RPModelPreviewModalController.m in Sources */,
 				88E5398D18FA8DC00086DACD /* RPDiagnosticState.m in Sources */,
 				88A3BFAE18FAA1CA00E975B8 /* RPModel.m in Sources */,
 				8811D82C18F9725900BA0171 /* RPDiagnosticObject.m in Sources */,
+				88216277190C0D9D008BB0B4 /* RPModelPreviewController.m in Sources */,
 				88A01236189E85600051D570 /* main.m in Sources */,
 				88AEEDF818B0B4E300597987 /* RPProjectModelController.m in Sources */,
 				88A3BFB218FAA81D00E975B8 /* RPSimulationWithoutAIController.m in Sources */,

@@ -12,6 +12,7 @@
 #import "RPModel.h"
 #import "RPStatesModalController.h"
 #import "RPEtalonController.h"
+#import "RPModelPreviewController.h"
 
 @implementation RPProjectModelController {
     NSMutableArray *diagnosticValues;
@@ -228,6 +229,19 @@
     [defaults synchronize];
     
     [SVProgressHUD showSuccessWithStatus:@"Модель успешно сохранена!"];
+}
+
+- (IBAction)onShowModel:(id)sender {
+    RPModelPreviewController *previewController = [RPModelPreviewController new];
+    previewController.customDelegate = self;
+    
+//    RPCreateDiagnosticValuesController *modalController = [RPCreateDiagnosticValuesController new];
+//    modalController.numberOfValues = @(self.txtNumberOfDiagnosticObjects.text.intValue);
+//    modalController.customDelegate = self;
+//    //    diagnosticValues = [NSMutableArray new];
+//    modalController.diagnosticValues = diagnosticValues;
+    
+    [self presentViewController:previewController animated:YES completion:nil];
 }
 
 @end
