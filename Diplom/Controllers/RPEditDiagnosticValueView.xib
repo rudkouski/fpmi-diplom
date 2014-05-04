@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -9,6 +9,8 @@
                 <outlet property="btnAddNewState" destination="PvQ-wb-Hvs" id="ktH-2h-JQs"/>
                 <outlet property="btnEditState" destination="Wny-EK-elW" id="dIg-Wu-iAf"/>
                 <outlet property="btnRemoveState" destination="QPH-fD-wFN" id="fha-AH-dAE"/>
+                <outlet property="lblNameTitle" destination="8I4-Z8-yf5" id="nK9-7R-teJ"/>
+                <outlet property="lblSecondTitle" destination="vaW-oE-F7d" id="mx4-pK-1gy"/>
                 <outlet property="tblStates" destination="JMc-0g-llM" id="8Xb-6k-nru"/>
                 <outlet property="txtManagement" destination="VB3-pC-fqX" id="05Z-1Y-lNw"/>
                 <outlet property="txtStateName" destination="qSl-IS-Gym" id="oKb-bJ-4uw"/>

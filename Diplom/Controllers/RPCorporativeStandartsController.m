@@ -7,8 +7,12 @@
 //
 
 #import "RPCorporativeStandartsController.h"
+#import "RPStatesModalController.h"
 
-@implementation RPCorporativeStandartsController
+@implementation RPCorporativeStandartsController {
+    NSMutableArray *objects;
+    NSMutableArray *states;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -39,7 +43,78 @@
     self.btnSaveToDB.titleLabel.textAlignment = NSTextAlignmentCenter;
     
     [self addGradientForButton:self.btnSaveToDB];
+    
+    self.btnCreateObjects.titleLabel.font = [UIFont fontWithName:@"SegoeUI" size:self.btnCreateObjects.font.pointSize];
+    self.btnCreateObjects.titleLabel.textAlignment = NSTextAlignmentCenter;
+    
+    [self addGradientForButton:self.btnCreateObjects];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *dataRepresentingSavedArray = [defaults objectForKey:@"standartObjects"];
+    
+    if (dataRepresentingSavedArray != nil) {
+        NSArray *oldSavedArray = [NSKeyedUnarchiver unarchiveObjectWithData:dataRepresentingSavedArray];
+        if (oldSavedArray != nil) {
+            objects = [[NSMutableArray alloc] initWithArray:oldSavedArray];
+            self.lblNumberOfObjects.text = @(objects.count).stringValue;
+        } else {
+            objects = [[NSMutableArray alloc] init];
+        }
+    }
+
+    dataRepresentingSavedArray = [defaults objectForKey:@"diagnosticStates"];
+    
+    if (dataRepresentingSavedArray != nil) {
+        NSArray *oldSavedArray = [NSKeyedUnarchiver unarchiveObjectWithData:dataRepresentingSavedArray];
+        if (oldSavedArray != nil) {
+            states = [[NSMutableArray alloc] initWithArray:oldSavedArray];
+//            self.txtNumberOfStates.text = @(states.count).stringValue;
+        } else {
+            states = [[NSMutableArray alloc] init];
+        }
+    }
+    
+    self.navigationController.navigationBar.backItem.title = @"";
 }
 
+- (void) setObjects:(NSMutableArray*)values {
+    objects = values;
+    self.lblNumberOfObjects.text = @(objects.count).stringValue;
+}
+
+- (void) setStates:(NSMutableArray*)values {
+    states = values;
+    self.lblNumberOfStates.text = @(states.count).stringValue;
+}
+
+- (IBAction)onCreateObjects:(id)sender {
+    RPStatesModalController *statesController = [RPStatesModalController new];
+    statesController.numberOfValues = @(self.lblNumberOfObjects.text.intValue);
+    statesController.states = objects;
+    statesController.isObjectsEditing = YES;
+    statesController.customDelegate = self;
+    
+    [self presentViewController:statesController animated:YES completion:nil];
+}
+
+- (IBAction)onCreateStates:(id)sender {
+    RPStatesModalController *statesController = [RPStatesModalController new];
+    statesController.numberOfValues = @(self.lblNumberOfStates.text.intValue);
+    statesController.states = states;
+    statesController.isObjectsEditing = NO;
+    statesController.customDelegate = self;
+    
+    [self presentViewController:statesController animated:YES completion:nil];
+}
+
+- (IBAction)onSave:(id)sender {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    [defaults setObject:[NSKeyedArchiver archivedDataWithRootObject:objects] forKey:@"standartObjects"];
+    
+    [defaults synchronize];
+    
+    [SVProgressHUD showSuccessWithStatus:@"Стандарты успешно сохранены!"];
+}
 
 @end

@@ -40,6 +40,16 @@
     self.tblStates.dataSource = self;
     
     self.navigationController.navigationBar.topItem.title = @"";
+    
+    if (self.isObjectEditing) {
+        self.lblNameTitle.text = @"Название объекта";
+        self.lblSecondTitle.text = @"Код объекта";
+        
+        [self.btnAddNewState setTitle:@"Добавить объект" forState:(UIControlStateNormal)];
+        [self.btnEditState setTitle:@"Изменить объект" forState:(UIControlStateNormal)];
+    }
+    
+    self.btnRemoveState.hidden = self.isObjectEditing;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

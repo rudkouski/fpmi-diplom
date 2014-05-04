@@ -17,4 +17,11 @@
 @property (weak, nonatomic) IBOutlet UITextView *txtUserManual;
 @property (weak, nonatomic) IBOutlet UIButton *btnSaveToDB;
 
+@property (weak, nonatomic) IBOutlet UITextField *lblNumberOfObjects;
+@property (weak, nonatomic) IBOutlet UITextField *lblNumberOfStates;
+@property (weak, nonatomic) IBOutlet UIButton *btnCreateObjects;
+
+- (void) setStates:(NSMutableArray*)values;
+- (void) setObjects:(NSMutableArray*)values;
+
 @end

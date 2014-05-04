@@ -23,4 +23,9 @@
 @property (strong, nonatomic) NSMutableArray *states;
 @property (weak, nonatomic) IBOutlet UITableView *tblStates;
 
+@property (weak, nonatomic) IBOutlet UILabel *lblNameTitle;
+@property (weak, nonatomic) IBOutlet UILabel *lblSecondTitle;
+
+@property (assign, nonatomic) BOOL isObjectEditing;
+
 @end

@@ -12,5 +12,6 @@
 
 @property (strong, nonatomic) NSMutableArray *states;
 @property (strong, nonatomic) NSNumber *numberOfValues;
+@property (assign, nonatomic) BOOL isObjectsEditing;
 
 @end
