@@ -10,6 +10,7 @@
 #import "RPProjectModelController.h"
 #import "RPCorporativeStandartsController.h"
 #import "RPSimulationWithoutAIController.h"
+#import "RPCompareSimulationsController.h"
 
 @implementation RPStartController
 
@@ -77,7 +78,19 @@
 
 - (IBAction)onSimulateWithoutAI:(id)sender {
     RPSimulationWithoutAIController *simulateController = [RPSimulationWithoutAIController new];
+    simulateController.isAIEnabled = NO;
     [self.navigationController pushViewController:simulateController animated:YES];
+}
+
+- (IBAction)onSimulateWithAI:(id)sender {
+    RPSimulationWithoutAIController *simulateController = [RPSimulationWithoutAIController new];
+    simulateController.isAIEnabled = YES;
+    [self.navigationController pushViewController:simulateController animated:YES];
+}
+
+- (IBAction)onCompareSimulations:(id)sender {
+    RPCompareSimulationsController *compareController = [RPCompareSimulationsController new];
+    [self.navigationController pushViewController:compareController animated:YES];
 }
 
 @end

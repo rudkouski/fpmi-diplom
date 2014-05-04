@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblStateName;
 @property (weak, nonatomic) IBOutlet UILabel *lblManageName;
 @property (weak, nonatomic) IBOutlet UILabel *lblVector;
+@property (weak, nonatomic) IBOutlet UIView *vwColor;
 
 @end

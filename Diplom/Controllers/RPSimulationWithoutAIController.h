@@ -23,4 +23,9 @@
 
 @property (weak, nonatomic) IBOutlet UIProgressView *vwProgress;
 
+@property (weak, nonatomic) IBOutlet UILabel *lblDialogPercentCenter;
+@property (weak, nonatomic) IBOutlet UILabel *lblDialogPercentMGO;
+
+@property (assign, nonatomic) BOOL isAIEnabled;
+
 @end

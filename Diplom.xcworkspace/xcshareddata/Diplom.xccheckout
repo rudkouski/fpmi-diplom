@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E0198AC2-1062-41D1-AA60-7BE7E4F8C36F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Diplom</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D4435228-EEC9-4D8B-A22E-EC38E1871F6F</key>
+		<string>https://github.com/bolshie-ludi/fpmi-diplom.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Diplom.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D4435228-EEC9-4D8B-A22E-EC38E1871F6F</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/bolshie-ludi/fpmi-diplom.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D4435228-EEC9-4D8B-A22E-EC38E1871F6F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D4435228-EEC9-4D8B-A22E-EC38E1871F6F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Diplom</string>
+		</dict>
+	</array>
+</dict>
+</plist>

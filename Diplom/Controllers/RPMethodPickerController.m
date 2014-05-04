@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    methods = @[@"Евклида", @"Махалалобиса", @"Комбинированный"];
+    methods = @[@"Евклида", @"Махаланобиса"];
     
     tblMethods = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 300, 200)];
     tblMethods.delegate = self;

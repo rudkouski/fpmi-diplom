@@ -45,7 +45,14 @@
         }
     }
     
-    self.title = [@"Моделирование без AI-модуля" uppercaseString];
+    if (self.isAIEnabled) {
+        self.title = [@"Моделирование с AI-модулем" uppercaseString];
+        self.txtMethod.enabled = NO;
+        self.txtMethod.text = @"Евклида";
+//        self.txtMethod.hidden = YES;
+    } else {
+        self.title = [@"Моделирование без AI-модуля" uppercaseString];
+    }
     
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     
@@ -87,15 +94,12 @@
             simulationResult = [RPSimulationWithoutAIService simulationWithNumberOfIterations:self.txtNumberOfIterations.text.integerValue
                                                                                          time:self.txtTimeInterval.text.floatValue
                                                                                   usingMethod:(SimulationMethodEvklid)];
-        } else if ([self.txtMethod.text isEqualToString:@"Махалалобиса"]){
+        } else if ([self.txtMethod.text isEqualToString:@"Махаланобиса"]){
             simulationResult = [RPSimulationWithoutAIService simulationWithNumberOfIterations:self.txtNumberOfIterations.text.integerValue
                                                                                          time:self.txtTimeInterval.text.floatValue
                                                                                   usingMethod:(SimulationMethodMahalanobis)];
-        } else {
-            simulationResult = [RPSimulationWithoutAIService simulationWithNumberOfIterations:self.txtNumberOfIterations.text.integerValue
-                                                                                         time:self.txtTimeInterval.text.floatValue
-                                                                                  usingMethod:(SimulationMethodCombined)];
         }
+        
         [self startSimulating];
     }];
 }
@@ -113,19 +117,69 @@
 
 - (void) addResult {
     if (currentIndex < simulationResult.count) {
-        [displayingResult addObject:simulationResult[currentIndex]];
-        
-        [self getStatesCount];
-        
-        [self.tblStatistics reloadData];
-        [self.tblSimulation reloadData];
-        
-        [self.tblSimulation scrollToRowAtIndexPath:[NSIndexPath indexPathForItem:currentIndex inSection:0] atScrollPosition:(UITableViewScrollPositionBottom) animated:YES];
-        
-        currentIndex++;
-        
-        [self.vwProgress setProgress:(currentIndex/(float)simulationResult.count)];
+        if (self.isAIEnabled) {
+            RPSimulationResult *result = simulationResult[currentIndex];
+            
+            CGFloat sum = 0;
+            
+            for (NSInteger index = 0; index < result.state.etalon.count; index++) {
+                NSString *tmp = result.state.etalon[index];
+                sum += tmp.floatValue;
+            }
+            
+//            NSNumber *sum = [result.state.etalon valueForKeyPath:@"sum.self"];
+            
+            if (sum / result.state.etalon.count < 0.5) {
+                [displayingResult addObject:simulationResult[currentIndex]];
+                
+                [self getStatesCount];
+                
+                [self.tblStatistics reloadData];
+                [self.tblSimulation reloadData];
+                
+                [self.tblSimulation scrollToRowAtIndexPath:[NSIndexPath indexPathForItem:(displayingResult.count - 1) inSection:0] atScrollPosition:(UITableViewScrollPositionBottom) animated:YES];
+            }
+            
+            currentIndex++;
+            
+            self.lblDialogPercentCenter.text = @(displayingResult.count).stringValue;
+            self.lblDialogPercentMGO.text = @(currentIndex).stringValue;
+            
+            [self.vwProgress setProgress:(currentIndex/(float)simulationResult.count)];
+            
+        } else {
+            [displayingResult addObject:simulationResult[currentIndex]];
+            
+            [self getStatesCount];
+            
+            [self.tblStatistics reloadData];
+            [self.tblSimulation reloadData];
+            
+            [self.tblSimulation scrollToRowAtIndexPath:[NSIndexPath indexPathForItem:currentIndex inSection:0] atScrollPosition:(UITableViewScrollPositionBottom) animated:YES];
+            
+            currentIndex++;
+            
+            self.lblDialogPercentCenter.text = @(currentIndex).stringValue;
+            self.lblDialogPercentMGO.text = @(currentIndex).stringValue;
+            
+            [self.vwProgress setProgress:(currentIndex/(float)simulationResult.count)];
+        }
     } else {
+        if (self.isAIEnabled) {
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            [defaults setObject:stateCounts forKey:@"RESULT_AI"];
+            [defaults setObject:self.lblDialogPercentMGO.text forKey:@"RESULT_AI_DIALOG_MGO"];
+            [defaults setObject:self.lblDialogPercentCenter.text forKey:@"RESULT_AI_DIALOG_CENTER"];
+            
+            [defaults synchronize];
+        } else {
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            [defaults setObject:stateCounts forKey:@"RESULT"];
+            [defaults setObject:self.lblDialogPercentMGO.text forKey:@"RESULT_DIALOG_MGO"];
+            [defaults setObject:self.lblDialogPercentCenter.text forKey:@"RESULT_DIALOG_CENTER"];
+            
+            [defaults synchronize];
+        }
         [currentTimer invalidate];
     }
 }
@@ -224,6 +278,23 @@
         }
         
         cell.lblVector.text = [NSString stringWithFormat:@"(%@)", [array componentsJoinedByString:@", "]];
+        
+        
+        CGFloat sum = 0;
+        
+        for (NSInteger index = 0; index < result.state.etalon.count; index++) {
+            NSString *tmp = result.state.etalon[index];
+            sum += tmp.floatValue;
+        }
+        
+        CGFloat value = sum / result.state.etalon.count;
+        
+        cell.vwColor.backgroundColor = [UIColor colorWithHue:value/2.5
+                                                  saturation:70
+                                                  brightness:1
+                                                       alpha:1];
+        
+//        cell.vwColor.backgroundColor = [UIColor colorWithRed:(255.0 * (1 - (sum / result.state.etalon.count)))/255.0f green:(255.0 * (sum / result.state.etalon.count))/255.0f blue:0 alpha:1];
         
         return cell;
     }
