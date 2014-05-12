@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *lblNumberOfObjects;
 @property (weak, nonatomic) IBOutlet UITextField *lblNumberOfStates;
 @property (weak, nonatomic) IBOutlet UIButton *btnCreateObjects;
+@property (weak, nonatomic) IBOutlet UIButton *btnShowMGO;
 
 - (void) setStates:(NSMutableArray*)values;
 - (void) setObjects:(NSMutableArray*)values;

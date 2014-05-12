@@ -8,6 +8,7 @@
 
 #import "RPCorporativeStandartsController.h"
 #import "RPStatesModalController.h"
+#import "RPMGOPreviewController.h"
 
 @implementation RPCorporativeStandartsController {
     NSMutableArray *objects;
@@ -48,6 +49,9 @@
     self.btnCreateObjects.titleLabel.textAlignment = NSTextAlignmentCenter;
     
     [self addGradientForButton:self.btnCreateObjects];
+    
+    self.btnShowMGO.titleLabel.font = [UIFont fontWithName:@"SegoeUI" size:self.btnShowMGO.font.pointSize];
+    [self addGradientForButton:self.btnShowMGO];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSData *dataRepresentingSavedArray = [defaults objectForKey:@"standartObjects"];
@@ -115,6 +119,12 @@
     [defaults synchronize];
     
     [SVProgressHUD showSuccessWithStatus:@"Стандарты успешно сохранены!"];
+}
+
+- (IBAction)onShowMGO:(id)sender {
+    RPMGOPreviewController *mgoController = [RPMGOPreviewController new];
+    
+    [self presentViewController:mgoController animated:YES completion:nil];
 }
 
 @end

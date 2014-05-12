@@ -11,6 +11,7 @@
 #import "RPCorporativeStandartsController.h"
 #import "RPSimulationWithoutAIController.h"
 #import "RPCompareSimulationsController.h"
+#import "RPFAQController.h"
 
 @implementation RPStartController
 
@@ -91,6 +92,11 @@
 - (IBAction)onCompareSimulations:(id)sender {
     RPCompareSimulationsController *compareController = [RPCompareSimulationsController new];
     [self.navigationController pushViewController:compareController animated:YES];
+}
+
+- (IBAction)onFAQ:(id)sender {
+    RPFAQController *faq = [RPFAQController new];
+    [self.navigationController pushViewController:faq animated:YES];
 }
 
 @end

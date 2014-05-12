@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		31F65AFA423146F0A424E02B /* libPods-Diplom.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C8A04EA8924043879B451E /* libPods-Diplom.a */; };
+		88065577191BE5EE009CCF12 /* RPMGOPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88065575191BE5EE009CCF12 /* RPMGOPreviewController.m */; };
+		88065578191BE5EE009CCF12 /* RPMGOPreviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88065576191BE5EE009CCF12 /* RPMGOPreviewView.xib */; };
+		88065584191BF0EA009CCF12 /* RPMGOImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88065582191BF0EA009CCF12 /* RPMGOImageController.m */; };
+		88065585191BF0EA009CCF12 /* RPMGOImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88065583191BF0EA009CCF12 /* RPMGOImageView.xib */; };
+		8806558919200B9F009CCF12 /* RPFAQController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8806558719200B9F009CCF12 /* RPFAQController.m */; };
+		8806558A19200B9F009CCF12 /* RPFAQView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8806558819200B9F009CCF12 /* RPFAQView.xib */; };
 		8811D82918F9708A00BA0171 /* RPCreateDiagnosticValuesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8811D82818F9708A00BA0171 /* RPCreateDiagnosticValuesController.m */; };
 		8811D82C18F9725900BA0171 /* RPDiagnosticObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8811D82B18F9725900BA0171 /* RPDiagnosticObject.m */; };
 		88216277190C0D9D008BB0B4 /* RPModelPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88216275190C0D9D008BB0B4 /* RPModelPreviewController.m */; };
@@ -74,6 +80,15 @@
 
 /* Begin PBXFileReference section */
 		69C8A04EA8924043879B451E /* libPods-Diplom.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Diplom.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		88065574191BE5EE009CCF12 /* RPMGOPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPMGOPreviewController.h; sourceTree = "<group>"; };
+		88065575191BE5EE009CCF12 /* RPMGOPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPMGOPreviewController.m; sourceTree = "<group>"; };
+		88065576191BE5EE009CCF12 /* RPMGOPreviewView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RPMGOPreviewView.xib; path = ../Controllers/RPMGOPreviewView.xib; sourceTree = "<group>"; };
+		88065581191BF0EA009CCF12 /* RPMGOImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPMGOImageController.h; sourceTree = "<group>"; };
+		88065582191BF0EA009CCF12 /* RPMGOImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPMGOImageController.m; sourceTree = "<group>"; };
+		88065583191BF0EA009CCF12 /* RPMGOImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RPMGOImageView.xib; path = ../Controllers/RPMGOImageView.xib; sourceTree = "<group>"; };
+		8806558619200B9F009CCF12 /* RPFAQController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPFAQController.h; sourceTree = "<group>"; };
+		8806558719200B9F009CCF12 /* RPFAQController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPFAQController.m; sourceTree = "<group>"; };
+		8806558819200B9F009CCF12 /* RPFAQView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RPFAQView.xib; path = ../Controllers/RPFAQView.xib; sourceTree = "<group>"; };
 		8811D82718F9708A00BA0171 /* RPCreateDiagnosticValuesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPCreateDiagnosticValuesController.h; sourceTree = "<group>"; };
 		8811D82818F9708A00BA0171 /* RPCreateDiagnosticValuesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPCreateDiagnosticValuesController.m; sourceTree = "<group>"; };
 		8811D82A18F9725900BA0171 /* RPDiagnosticObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPDiagnosticObject.h; sourceTree = "<group>"; };
@@ -289,6 +304,12 @@
 				88FF43BD1916BC9200EDA995 /* RPCompareSimulationsController.h */,
 				88FF43BE1916BC9200EDA995 /* RPCompareSimulationsController.m */,
 				88B72CA718FDB519000EF289 /* Cell */,
+				88065574191BE5EE009CCF12 /* RPMGOPreviewController.h */,
+				88065575191BE5EE009CCF12 /* RPMGOPreviewController.m */,
+				88065581191BF0EA009CCF12 /* RPMGOImageController.h */,
+				88065582191BF0EA009CCF12 /* RPMGOImageController.m */,
+				8806558619200B9F009CCF12 /* RPFAQController.h */,
+				8806558719200B9F009CCF12 /* RPFAQController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -305,6 +326,9 @@
 				88216276190C0D9D008BB0B4 /* RPModelPreviewView.xib */,
 				8821627B190C0FE3008BB0B4 /* RPModelPreviewModalView.xib */,
 				88FF43BF1916BC9200EDA995 /* RPCompareSimulationsView.xib */,
+				88065576191BE5EE009CCF12 /* RPMGOPreviewView.xib */,
+				88065583191BF0EA009CCF12 /* RPMGOImageView.xib */,
+				8806558819200B9F009CCF12 /* RPFAQView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -452,9 +476,12 @@
 				88AEEDF918B0B4E300597987 /* RPProjectModelView.xib in Resources */,
 				88A0127E189EA08F0051D570 /* segoeuiz.ttf in Resources */,
 				88A01268189E867F0051D570 /* RPStartView.xib in Resources */,
+				88065578191BE5EE009CCF12 /* RPMGOPreviewView.xib in Resources */,
 				88216282190C11BD008BB0B4 /* RPModelPreviewCell.xib in Resources */,
 				88A0127F189EA08F0051D570 /* seguisb.ttf in Resources */,
+				8806558A19200B9F009CCF12 /* RPFAQView.xib in Resources */,
 				88A01234189E85600051D570 /* InfoPlist.strings in Resources */,
+				88065585191BF0EA009CCF12 /* RPMGOImageView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,10 +553,13 @@
 				88FF43C01916BC9200EDA995 /* RPCompareSimulationsController.m in Sources */,
 				88E5398D18FA8DC00086DACD /* RPDiagnosticState.m in Sources */,
 				88A3BFAE18FAA1CA00E975B8 /* RPModel.m in Sources */,
+				88065577191BE5EE009CCF12 /* RPMGOPreviewController.m in Sources */,
 				8811D82C18F9725900BA0171 /* RPDiagnosticObject.m in Sources */,
 				88216277190C0D9D008BB0B4 /* RPModelPreviewController.m in Sources */,
 				88A01236189E85600051D570 /* main.m in Sources */,
+				88065584191BF0EA009CCF12 /* RPMGOImageController.m in Sources */,
 				88AEEDF818B0B4E300597987 /* RPProjectModelController.m in Sources */,
+				8806558919200B9F009CCF12 /* RPFAQController.m in Sources */,
 				88A3BFB218FAA81D00E975B8 /* RPSimulationWithoutAIController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

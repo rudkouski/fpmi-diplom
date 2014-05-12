@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="btnCreateObjects" destination="Jt3-Ts-DOx" id="dMv-Zt-2yg"/>
                 <outlet property="btnSaveToDB" destination="jki-an-tfG" id="duh-7E-w6u"/>
+                <outlet property="btnShowMGO" destination="odW-r7-ZP8" id="iAd-8w-PUf"/>
                 <outlet property="lblNumberOfObjects" destination="Tda-0E-LDn" id="lLv-Sg-pKu"/>
                 <outlet property="lblNumberOfStates" destination="6iV-dj-Sxx" id="AZp-X1-uHD"/>
                 <outlet property="txtUserManual" destination="dmd-Vx-36c" id="J5p-m7-eEs"/>
@@ -35,7 +36,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="eKr-UD-JpL">
-                                <rect key="frame" x="15" y="58" width="493" height="225"/>
+                                <rect key="frame" x="15" y="58" width="493" height="283"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество типов объектов:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="E3Y-Yc-jzp">
@@ -64,11 +65,24 @@
                                             <action selector="onCreateObjects:" destination="-1" eventType="touchUpInside" id="MNO-S7-yGv"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" id="odW-r7-ZP8">
+                                        <rect key="frame" x="20" y="213" width="453" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.58039215690000001" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Показать МГО">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onShowMGO:" destination="-1" eventType="touchUpInside" id="Y7M-aY-pyv"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" id="FRc-JJ-AFy">
-                                <rect key="frame" x="15" y="319" width="493" height="225"/>
+                                <rect key="frame" x="15" y="368" width="493" height="225"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количесво возможных состояний:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="25F-l4-LXe">
@@ -101,7 +115,7 @@
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" id="bUN-jP-cmO">
-                                <rect key="frame" x="516" y="58" width="493" height="486"/>
+                                <rect key="frame" x="516" y="58" width="493" height="535"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" id="dmd-Vx-36c">
@@ -143,7 +157,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Стандарты состояний" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KYc-eb-zVl">
-                                <rect key="frame" x="111" y="299" width="300" height="40"/>
+                                <rect key="frame" x="111" y="349" width="300" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
